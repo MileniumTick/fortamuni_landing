@@ -1,0 +1,198 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand colors in OKLCH for perceptual uniformity */
+  --color-navy: oklch(27% 0.05 260);
+  --color-navy-light: oklch(35% 0.05 260);
+  --color-navy-dark: oklch(20% 0.05 260);
+  --color-gold: oklch(72% 0.15 85);
+  --color-gold-light: oklch(82% 0.12 85);
+  --color-gold-dark: oklch(62% 0.15 85);
+
+  /* Semantic tokens */
+  --color-primary: oklch(27% 0.05 260);
+  --color-primary-foreground: oklch(98% 0 0);
+  --color-accent: oklch(72% 0.15 85);
+  --color-accent-foreground: oklch(20% 0.05 260);
+  --color-background: oklch(99% 0.005 260);
+  --color-foreground: oklch(20% 0.03 260);
+  --color-muted: oklch(96% 0.005 260);
+  --color-muted-foreground: oklch(45% 0.02 260);
+  --color-border: oklch(90% 0.01 260);
+  --color-surface: oklch(100% 0 0);
+  --color-success: oklch(65% 0.2 145);
+  --color-error: oklch(55% 0.2 27);
+
+  /* Typography */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  /* Animations */
+  --animate-fade-up: fade-up 0.6s ease-out forwards;
+  --animate-fade-in: fade-in 0.4s ease-out forwards;
+  --animate-slide-down: slide-down 0.3s ease-out;
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slide-down {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-skeleton {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+  }
+}
+
+/* ============================================================
+   Scroll animation base state
+   ============================================================ */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered delays for child elements */
+.animate-on-scroll.delay-100 { transition-delay: 100ms; }
+.animate-on-scroll.delay-200 { transition-delay: 200ms; }
+.animate-on-scroll.delay-300 { transition-delay: 300ms; }
+.animate-on-scroll.delay-400 { transition-delay: 400ms; }
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ============================================================
+   Chart skeleton loader
+   ============================================================ */
+.chart-skeleton {
+  animation: pulse-skeleton 1.5s ease-in-out infinite;
+  background: var(--color-muted);
+  border-radius: 0.5rem;
+  height: 100%;
+  width: 100%;
+}
+
+.chart-frame {
+  position: relative;
+  height: 220px;
+  width: 100%;
+}
+
+.chart-canvas {
+  display: block;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+/* ============================================================
+   Accordion transitions
+   ============================================================ */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.accordion-content.open {
+  max-height: 500px;
+}
+
+/* ============================================================
+   Navigation transitions
+   ============================================================ */
+.nav-scrolled {
+  background-color: oklch(27% 0.05 260 / 0.97);
+  box-shadow: 0 2px 10px oklch(0% 0 0 / 0.15);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.mobile-menu.open {
+  max-height: 300px;
+}
+
+/* ============================================================
+   Form styles
+   ============================================================ */
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-foreground);
+  background-color: var(--color-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px oklch(72% 0.15 85 / 0.2);
+}
+
+.form-input.error {
+  border-color: var(--color-error);
+}
+
+.form-error {
+  color: var(--color-error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.form-error.visible {
+  display: block;
+}
+
+/* Honeypot — visually hidden but accessible to bots */
+.ohnohoney {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+/* ============================================================
+   Focus styles for accessibility
+   ============================================================ */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   Smooth scrolling (CSS fallback)
+   ============================================================ */
+html {
+  scroll-behavior: smooth;
+}
