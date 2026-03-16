@@ -21,6 +21,17 @@ function setFieldError(fieldName: string, message = ''): void {
   }
 }
 
+function clearStatus(): void {
+  const status = document.querySelector<HTMLElement>('[data-form-status]');
+  if (!status) {
+    return;
+  }
+
+  status.textContent = '';
+  status.classList.add('hidden');
+  status.setAttribute('aria-hidden', 'true');
+}
+
 function clearErrors(form: HTMLFormElement): void {
   const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input[name], textarea[name]'));
   fields.forEach((field) => setFieldError(field.name));
@@ -61,9 +72,19 @@ export function initContact(): void {
     return;
   }
 
+  const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLTextAreaElement>('input[name], textarea[name]'));
+
+  fields.forEach((field) => {
+    field.addEventListener('input', () => {
+      setFieldError(field.name);
+      clearStatus();
+    });
+  });
+
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     clearErrors(form);
+    clearStatus();
 
     const data = getFormData(form);
     const validation = validateForm(data);

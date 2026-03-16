@@ -19,15 +19,30 @@ export function initCaseStudies(): void {
     });
   };
 
+  const showChartFallback = () => {
+    const skeletons = Array.from(section.querySelectorAll<HTMLElement>('[data-chart-skeleton]'));
+
+    skeletons.forEach((skeleton) => {
+      skeleton.classList.remove('chart-skeleton');
+      skeleton.classList.add('chart-fallback');
+      skeleton.textContent = 'No fue posible cargar la visualización en este momento.';
+    });
+  };
+
   const loadCharts = async () => {
     if (hasLoaded) {
       return;
     }
 
     hasLoaded = true;
-    const { renderCaseStudyCharts } = await import('../components/charts');
-    renderCaseStudyCharts();
-    revealCharts();
+
+    try {
+      const { renderCaseStudyCharts } = await import('../components/charts');
+      renderCaseStudyCharts();
+      revealCharts();
+    } catch {
+      showChartFallback();
+    }
   };
 
   const observer = new IntersectionObserver(

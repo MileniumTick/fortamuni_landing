@@ -3,6 +3,10 @@ function getHeaderOffset(): number {
   return header ? header.offsetHeight + 12 : 96;
 }
 
+function prefersReducedMotion(): boolean {
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+}
+
 export function initSmoothScroll(): void {
   const anchorLinks = Array.from(document.querySelectorAll<HTMLAnchorElement>('a[href^="#"]'));
 
@@ -22,12 +26,22 @@ export function initSmoothScroll(): void {
 
       const offsetTop = target.getBoundingClientRect().top + window.scrollY - getHeaderOffset();
 
+      if (!target.hasAttribute('tabindex')) {
+        target.setAttribute('tabindex', '-1');
+      }
+
       window.scrollTo({
         top: offsetTop,
-        behavior: 'smooth',
+        behavior: prefersReducedMotion() ? 'auto' : 'smooth',
       });
 
       window.history.replaceState(null, '', href);
+      window.setTimeout(
+        () => {
+          target.focus({ preventScroll: true });
+        },
+        prefersReducedMotion() ? 0 : 250,
+      );
     });
   });
 }

@@ -6,6 +6,21 @@ export function initServices(): void {
 
   const triggers = Array.from(accordion.querySelectorAll<HTMLButtonElement>('[data-accordion-trigger]'));
 
+  const setContentState = (content: HTMLElement | null, isOpen: boolean) => {
+    if (!content) {
+      return;
+    }
+
+    if (isOpen) {
+      content.classList.add('open');
+      content.style.maxHeight = `${content.scrollHeight}px`;
+      return;
+    }
+
+    content.style.maxHeight = '0px';
+    content.classList.remove('open');
+  };
+
   const closeAll = () => {
     triggers.forEach((trigger) => {
       const contentId = trigger.getAttribute('aria-controls');
@@ -17,8 +32,13 @@ export function initServices(): void {
         icon.textContent = '+';
       }
 
-      content?.classList.remove('open');
+      setContentState(content, false);
     });
+  };
+
+  const focusTriggerByIndex = (index: number) => {
+    const safeIndex = (index + triggers.length) % triggers.length;
+    triggers[safeIndex]?.focus();
   };
 
   triggers.forEach((trigger) => {
@@ -39,16 +59,57 @@ export function initServices(): void {
         icon.textContent = '−';
       }
 
-      content.classList.add('open');
+      setContentState(content, true);
     });
 
     trigger.addEventListener('keydown', (event) => {
-      if (event.key !== 'Enter' && event.key !== ' ') {
+      const currentIndex = triggers.indexOf(trigger);
+
+      switch (event.key) {
+        case 'Enter':
+        case ' ': {
+          event.preventDefault();
+          trigger.click();
+          break;
+        }
+        case 'ArrowDown': {
+          event.preventDefault();
+          focusTriggerByIndex(currentIndex + 1);
+          break;
+        }
+        case 'ArrowUp': {
+          event.preventDefault();
+          focusTriggerByIndex(currentIndex - 1);
+          break;
+        }
+        case 'Home': {
+          event.preventDefault();
+          focusTriggerByIndex(0);
+          break;
+        }
+        case 'End': {
+          event.preventDefault();
+          focusTriggerByIndex(triggers.length - 1);
+          break;
+        }
+        default:
+          break;
+      }
+    });
+  });
+
+  window.addEventListener('resize', () => {
+    triggers.forEach((trigger) => {
+      const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+      if (!isExpanded) {
         return;
       }
 
-      event.preventDefault();
-      trigger.click();
+      const contentId = trigger.getAttribute('aria-controls');
+      const content = contentId ? document.getElementById(contentId) : null;
+      if (content) {
+        content.style.maxHeight = `${content.scrollHeight}px`;
+      }
     });
   });
 }
