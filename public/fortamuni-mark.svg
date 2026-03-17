@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="fortamuni-mark-title fortamuni-mark-desc">
+  <title id="fortamuni-mark-title">FortaMuni mark</title>
+  <desc id="fortamuni-mark-desc">Escudo azul con ruta central, check naranja y hoja verde.</desc>
+  <defs>
+    <linearGradient id="mark-shield" x1="16" y1="10" x2="84" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b82c4" />
+      <stop offset="1" stop-color="#15558c" />
+    </linearGradient>
+    <linearGradient id="mark-road" x1="48" y1="24" x2="48" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.95" />
+      <stop offset="1" stop-color="#d7ebfa" stop-opacity="0.9" />
+    </linearGradient>
+  </defs>
+  <path d="M48 8c22 0 40 6 40 6v32c0 24-16 46-40 58C24 92 8 70 8 46V14s18-6 40-6Z" fill="url(#mark-shield)" />
+  <path d="M48 22c11 0 20 2.7 20 2.7v20.8c0 14.8-7.8 29.4-20 39.3-12.2-9.9-20-24.5-20-39.3V24.7S37 22 48 22Z" fill="#0f3f67" opacity="0.28" />
+  <path d="M48 26c4.1 6 6.7 14.2 6.7 23.3 0 10-3 18.8-6.7 25.8-3.7-7-6.8-15.8-6.8-25.8 0-9.1 2.7-17.3 6.8-23.3Z" fill="url(#mark-road)" />
+  <path d="M31 60.5 42.5 71 66.5 46.5" fill="none" stroke="#f6a63a" stroke-linecap="round" stroke-linejoin="round" stroke-width="8" />
+  <path d="M61 72.5c9.2-1.4 15.4-7.7 18.3-16.7-1.6 7.8-4.7 15.5-10.2 22.4-4.3 5.4-10 9.8-16.5 12.9 4-4.2 6.4-11.4 8.4-18.6Z" fill="#49a86c" />
+  <path d="M57.5 91.1c1.9-2.9 3.1-6.6 4.4-10.5 5.3-.4 10.4-2 14.7-5-2.2 5.7-6 11-11.2 14.8-2.4 1.8-5 3.2-7.9 4.4Z" fill="#2f8f57" />
+</svg>

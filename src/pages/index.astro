@@ -5,6 +5,8 @@ const title = 'Fortamuni | Gestión vial municipal con respaldo técnico';
 const description = 'Fortamuni asesora municipalidades en Costa Rica con planes viales quinquenales, inventarios de red vial cantonal, valoración de activos bajo NICSP y soporte técnico para cumplimiento ante CGR, MOPT, Ley 8114 y Ley 9329.';
 const canonical = 'https://fortamuni.cr/';
 const ogImage = 'https://fortamuni.cr/og-image.jpg';
+const logoImage = 'https://fortamuni.cr/fortamuni-logo.svg';
+const markImage = 'https://fortamuni.cr/fortamuni-mark.svg';
 ---
 
 <Layout title={title} description={description} canonical={canonical} ogImage={ogImage}>
@@ -15,7 +17,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             "@type": "ProfessionalService",
             "name": "Fortamuni",
             "url": "https://fortamuni.cr/",
-            "logo": "https://fortamuni.cr/favicon.svg",
+            "logo": logoImage,
             "image": "https://fortamuni.cr/og-image.jpg",
             "description": "Firma consultora especializada en gestión vial municipal, planes viales quinquenales, inventarios de la red vial cantonal, valoración de activos bajo NICSP y diagnósticos participativos para gobiernos locales en Costa Rica.",
             "areaServed": {
@@ -100,15 +102,19 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
 
   <section
           id="hero"
-          class="relative overflow-hidden bg-primary px-4 pb-20 pt-32 sm:px-6 lg:px-8 lg:pb-28 lg:pt-40"
+          class="brand-hero-glow relative overflow-hidden px-4 pb-20 pt-32 sm:px-6 lg:px-8 lg:pb-28 lg:pt-40"
           aria-label="Presentación"
           data-section
         >
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(214,158,46,0.25),_transparent_35%),radial-gradient(circle_at_bottom_left,_rgba(255,255,255,0.08),_transparent_30%)]"></div>
+          <div class="brand-grid-overlay absolute inset-0 opacity-40"></div>
           <div class="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
-              <div class="animate-on-scroll inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent">
-                <span class="h-2 w-2 rounded-full bg-accent"></span>
+              <div class="animate-on-scroll inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-sm font-semibold text-primary-foreground shadow-lg shadow-black/10 backdrop-blur-sm">
+                <span class="brand-icon-badge brand-icon-badge--accent h-6 w-6 rounded-full border-0 bg-white/12 text-inherit">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-3.5 w-3.5 fill-none stroke-current stroke-[2.2]">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                  </svg>
+                </span>
                 Diagnóstico técnico inicial para gobiernos locales
               </div>
               <h1 class="animate-on-scroll delay-100 mt-6 max-w-4xl text-4xl font-extrabold leading-tight text-primary-foreground sm:text-5xl lg:text-6xl">
@@ -121,73 +127,86 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
               <div class="animate-on-scroll delay-300 mt-8 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="#contacto"
-                  class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground transition hover:bg-gold-light"
+                  class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]"
                 >
                   Agendar diagnóstico
                 </a>
                 <a
                   href="#proceso"
-                  class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-4 text-base font-semibold text-primary-foreground transition hover:border-accent hover:text-accent"
+                  class="inline-flex items-center justify-center rounded-full border border-white/20 px-6 py-4 text-base font-semibold text-primary-foreground transition hover:border-white hover:bg-white/5"
                 >
                   Ver cómo trabajamos
                 </a>
               </div>
-  
+
               <dl class="animate-on-scroll delay-400 mt-10 grid gap-4 sm:grid-cols-3">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <dt class="text-sm font-medium text-primary-foreground/70">Punto de partida</dt>
                   <dd class="mt-2 text-base font-bold text-primary-foreground">Diagnóstico técnico inicial</dd>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <dt class="text-sm font-medium text-primary-foreground/70">Enfoque</dt>
                   <dd class="mt-2 text-base font-bold text-primary-foreground">Diagnóstico + ruta recomendada</dd>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <dt class="text-sm font-medium text-primary-foreground/70">Dirigido a</dt>
                   <dd class="mt-2 text-base font-bold text-primary-foreground">UTGV, alcaldías, concejos y hacienda</dd>
                 </div>
               </dl>
-  
+
               <div class="animate-on-scroll delay-400 mt-8 flex flex-col gap-3 text-sm text-primary-foreground/72 sm:flex-row sm:flex-wrap sm:items-center">
-                <span class="rounded-full border border-white/15 px-4 py-2">SICOP activo</span>
-                <span class="rounded-full border border-white/15 px-4 py-2">Enfoque UTGV</span>
-                <span class="rounded-full border border-white/15 px-4 py-2">Cumplimiento CGR / MOPT</span>
-                <span class="rounded-full border border-white/15 px-4 py-2">NICSP + Ley 8114 / 9329</span>
+                <span class="brand-chip rounded-full px-4 py-2">SICOP activo</span>
+                <span class="brand-chip rounded-full px-4 py-2">Enfoque UTGV</span>
+                <span class="brand-chip rounded-full px-4 py-2">Cumplimiento CGR / MOPT</span>
+                <span class="brand-chip rounded-full px-4 py-2">NICSP + Ley 8114 / 9329</span>
               </div>
             </div>
-  
+
             <div class="animate-on-scroll delay-300">
-              <div class="rounded-[2rem] border border-white/10 bg-white/10 p-6 shadow-2xl shadow-black/20 backdrop-blur">
+              <div class="brand-glass-card rounded-[2rem] p-6">
                 <div class="rounded-[1.5rem] bg-surface p-8 text-foreground">
                   <div class="flex items-start justify-between gap-4">
                     <div>
                       <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Oferta inicial</p>
                       <h2 class="mt-3 text-2xl font-extrabold text-primary">Diagnóstico técnico inicial</h2>
                     </div>
-                    <span class="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">Costa Rica</span>
+                    <span class="brand-chip rounded-full px-3 py-1 text-xs font-bold">Costa Rica</span>
                   </div>
-  
-                  <ul class="mt-6 space-y-4 text-sm leading-7 text-muted-foreground sm:text-base">
-                    <li class="flex gap-3">
-                      <span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent"></span>
-                       Revisión inicial del contexto vial, documental e institucional del cantón.
+
+                  <ul class="brand-bullet-list mt-6 text-sm leading-7 text-muted-foreground sm:text-base">
+                    <li>
+                      <span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-9 w-9 rounded-xl">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6l4 2" />
+                          <circle cx="12" cy="12" r="8" />
+                        </svg>
+                      </span>
+                      <span>Revisión inicial del contexto vial, documental e institucional del cantón.</span>
                     </li>
-                    <li class="flex gap-3">
-                      <span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent"></span>
-                       Identificación del cuello de botella prioritario para no arrancar por intuición.
+                    <li>
+                      <span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-9 w-9 rounded-xl">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M3 12h6l3-7 4 14 3-7h2" />
+                        </svg>
+                      </span>
+                      <span>Identificación del cuello de botella prioritario para no arrancar por intuición.</span>
                     </li>
-                    <li class="flex gap-3">
-                      <span class="mt-1 h-2.5 w-2.5 rounded-full bg-accent"></span>
-                       Definición del siguiente paso recomendado con criterio técnico y lectura municipal real.
+                    <li>
+                      <span class="brand-icon-badge brand-bullet-icon h-9 w-9 rounded-xl">
+                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4L19 6" />
+                        </svg>
+                      </span>
+                      <span>Definición del siguiente paso recomendado con criterio técnico y lectura municipal real.</span>
                     </li>
                   </ul>
-  
+
                   <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                    <div class="rounded-2xl bg-muted p-4">
+                    <div class="brand-soft-panel rounded-2xl p-4">
                       <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Aplica para</p>
                       <p class="mt-2 text-lg font-bold text-primary">PVQCD, inventarios, NICSP y priorización vial</p>
                     </div>
-                    <div class="rounded-2xl bg-muted p-4">
+                    <div class="brand-soft-panel rounded-2xl p-4">
                       <p class="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">Resultado esperado</p>
                       <p class="mt-2 text-lg font-bold text-primary">Ruta clara para avanzar sin improvisar</p>
                     </div>
@@ -256,10 +275,10 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-              <article class="animate-on-scroll rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
+              <article class="animate-on-scroll brand-outline-panel rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
                 <div class="flex items-center gap-5">
-                  <div class="flex h-20 w-20 items-center justify-center rounded-3xl bg-primary text-3xl font-extrabold text-primary-foreground">
-                    SM
+                  <div class="brand-soft-panel flex h-20 w-20 items-center justify-center rounded-3xl p-3 shadow-sm">
+                    <img src="/fortamuni-mark.svg" alt="" class="h-full w-full" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Dirección técnica</p>
@@ -279,29 +298,29 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                 </div>
   
                 <dl class="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div class="rounded-2xl bg-muted p-5">
+                  <div class="brand-soft-panel rounded-2xl p-5">
                     <dt class="text-sm font-medium text-muted-foreground">Trayectoria aplicada</dt>
                     <dd class="mt-2 font-bold text-primary">Gestión vial y proyectos municipales</dd>
                   </div>
-                  <div class="rounded-2xl bg-muted p-5">
+                  <div class="brand-soft-panel rounded-2xl p-5">
                     <dt class="text-sm font-medium text-muted-foreground">Registro público</dt>
                     <dd class="mt-2 font-bold text-primary">Operadora activa en SICOP</dd>
                   </div>
                 </dl>
               </article>
-  
+
               <div class="space-y-6">
-                <article class="animate-on-scroll delay-100 rounded-[2rem] border border-border bg-muted p-8">
+                <article class="animate-on-scroll delay-100 brand-soft-panel rounded-[2rem] border border-border p-8">
                   <h3 class="text-2xl font-extrabold text-primary">Lo que resolvemos para una municipalidad</h3>
-                  <ul class="mt-6 space-y-4 text-base leading-8 text-muted-foreground">
-                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>Definimos rutas técnicas de inversión a 5 años para evitar improvisación presupuestaria.</li>
-                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>Actualizamos el estado real de la red vial con levantamiento de datos y criterios de priorización.</li>
-                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>Respaldamos estados financieros y auditorías con valoración de activos alineada a NICSP.</li>
-                    <li class="flex gap-3"><span class="mt-2 h-2.5 w-2.5 rounded-full bg-accent"></span>Integramos necesidades comunitarias sin perder estructura técnica ni trazabilidad.</li>
+                  <ul class="brand-bullet-list mt-6 text-base leading-8 text-muted-foreground">
+                    <li><span class="brand-icon-badge brand-bullet-icon h-9 w-9 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M5 16l4.5-5 3.5 3 5.5-7" /></svg></span><span>Definimos rutas técnicas de inversión a 5 años para evitar improvisación presupuestaria.</span></li>
+                    <li><span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-9 w-9 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M6 19h12M7 16V8l5-3 5 3v8" /></svg></span><span>Actualizamos el estado real de la red vial con levantamiento de datos y criterios de priorización.</span></li>
+                    <li><span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-9 w-9 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M7 12h10M9 18h6" /></svg></span><span>Respaldamos estados financieros y auditorías con valoración de activos alineada a NICSP.</span></li>
+                    <li><span class="brand-icon-badge brand-bullet-icon h-9 w-9 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4.5 w-4.5 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M3 12h18" /></svg></span><span>Integramos necesidades comunitarias sin perder estructura técnica ni trazabilidad.</span></li>
                   </ul>
                 </article>
-  
-                <article class="animate-on-scroll delay-200 rounded-[2rem] border border-accent/30 bg-primary p-8 text-primary-foreground">
+
+                <article class="animate-on-scroll delay-200 brand-outline-panel rounded-[2rem] border border-white/10 bg-primary p-8 text-primary-foreground">
                   <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Resultado esperado</p>
                   <blockquote class="mt-4 text-2xl font-bold leading-tight sm:text-3xl">
                     Documentos técnicamente sólidos, políticamente defendibles y operativamente ejecutables.
@@ -315,9 +334,10 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
           </div>
         </section>
   
-        <section id="proceso" class="bg-primary px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-label="Proceso de trabajo">
+        <section id="proceso" class="brand-hero-glow relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24" aria-label="Proceso de trabajo">
+          <div class="brand-grid-overlay absolute inset-0 opacity-30"></div>
           <div class="mx-auto max-w-7xl">
-            <div class="animate-on-scroll max-w-3xl text-primary-foreground">
+            <div class="animate-on-scroll relative max-w-3xl text-primary-foreground">
               <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Metodología de trabajo</p>
               <h2 class="mt-4 text-3xl font-extrabold sm:text-4xl">Un proceso para ordenar información, priorizar inversión y sostener decisiones.</h2>
               <p class="mt-6 text-lg leading-8 text-primary-foreground/78">
@@ -325,28 +345,28 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
               </p>
             </div>
   
-            <div class="mt-12 grid gap-6 lg:grid-cols-5">
-              <article class="animate-on-scroll rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-primary-foreground">
+            <div class="relative mt-12 grid gap-6 lg:grid-cols-5">
+              <article class="animate-on-scroll brand-outline-panel rounded-[1.75rem] border border-white/10 bg-white/6 p-6 text-primary-foreground backdrop-blur-sm">
                 <p class="text-sm font-bold text-accent">01</p>
                 <h3 class="mt-3 text-xl font-extrabold">Diagnóstico inicial</h3>
                 <p class="mt-4 text-sm leading-7 text-primary-foreground/76">Revisión del contexto del cantón, necesidad institucional, estado documental y objetivo técnico prioritario.</p>
               </article>
-              <article class="animate-on-scroll delay-100 rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-primary-foreground">
+              <article class="animate-on-scroll delay-100 brand-outline-panel rounded-[1.75rem] border border-white/10 bg-white/6 p-6 text-primary-foreground backdrop-blur-sm">
                 <p class="text-sm font-bold text-accent">02</p>
                 <h3 class="mt-3 text-xl font-extrabold">Levantamiento y análisis</h3>
                 <p class="mt-4 text-sm leading-7 text-primary-foreground/76">Recopilación de datos físicos, revisión normativa y estructuración de variables para priorización y valoración.</p>
               </article>
-              <article class="animate-on-scroll delay-200 rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-primary-foreground">
+              <article class="animate-on-scroll delay-200 brand-outline-panel rounded-[1.75rem] border border-white/10 bg-white/6 p-6 text-primary-foreground backdrop-blur-sm">
                 <p class="text-sm font-bold text-accent">03</p>
                 <h3 class="mt-3 text-xl font-extrabold">Modelo de priorización</h3>
                 <p class="mt-4 text-sm leading-7 text-primary-foreground/76">Definición de criterios técnicos y matrices que ayuden a justificar decisiones de inversión ante diferentes actores.</p>
               </article>
-              <article class="animate-on-scroll delay-300 rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-primary-foreground">
+              <article class="animate-on-scroll delay-300 brand-outline-panel rounded-[1.75rem] border border-white/10 bg-white/6 p-6 text-primary-foreground backdrop-blur-sm">
                 <p class="text-sm font-bold text-accent">04</p>
                 <h3 class="mt-3 text-xl font-extrabold">Entregable defendible</h3>
                 <p class="mt-4 text-sm leading-7 text-primary-foreground/76">Producción de documentos técnicamente sólidos, comprensibles para decisión política y consistentes con el entorno regulatorio.</p>
               </article>
-              <article class="animate-on-scroll delay-400 rounded-[1.75rem] border border-white/10 bg-white/5 p-6 text-primary-foreground">
+              <article class="animate-on-scroll delay-400 brand-outline-panel rounded-[1.75rem] border border-white/10 bg-white/6 p-6 text-primary-foreground backdrop-blur-sm">
                 <p class="text-sm font-bold text-accent">05</p>
                 <h3 class="mt-3 text-xl font-extrabold">Seguimiento y continuidad</h3>
                 <p class="mt-4 text-sm leading-7 text-primary-foreground/76">Acompañamiento orientado a que la inversión no dependa solo del ciclo político, sino de una estructura técnica previa.</p>
@@ -366,19 +386,19 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-              <article class="animate-on-scroll rounded-[1.75rem] border border-border bg-muted p-6">
+              <article class="animate-on-scroll brand-soft-panel rounded-[1.75rem] border border-border p-6">
                 <h3 class="text-xl font-extrabold text-primary">Observaciones por falta de trazabilidad</h3>
                 <p class="mt-4 text-base leading-7 text-muted-foreground">Cuando la municipalidad no logra demostrar por qué priorizó una intervención, la inversión queda expuesta a cuestionamientos técnicos y de control.</p>
               </article>
-              <article class="animate-on-scroll delay-100 rounded-[1.75rem] border border-border bg-muted p-6">
+              <article class="animate-on-scroll delay-100 brand-soft-panel rounded-[1.75rem] border border-border p-6">
                 <h3 class="text-xl font-extrabold text-primary">Discontinuidad por cambios políticos</h3>
                 <p class="mt-4 text-base leading-7 text-muted-foreground">Sin una hoja de ruta clara, cada cambio de administración reinicia la conversación y erosiona el avance acumulado del cantón.</p>
               </article>
-              <article class="animate-on-scroll delay-200 rounded-[1.75rem] border border-border bg-muted p-6">
+              <article class="animate-on-scroll delay-200 brand-soft-panel rounded-[1.75rem] border border-border p-6">
                 <h3 class="text-xl font-extrabold text-primary">Activos mal registrados o subvalorados</h3>
                 <p class="mt-4 text-base leading-7 text-muted-foreground">La valoración deficiente bajo NICSP afecta estados financieros, soporte documental y lectura real del patrimonio público vial.</p>
               </article>
-              <article class="animate-on-scroll delay-300 rounded-[1.75rem] border border-border bg-muted p-6">
+              <article class="animate-on-scroll delay-300 brand-soft-panel rounded-[1.75rem] border border-border p-6">
                 <h3 class="text-xl font-extrabold text-primary">Presupuesto sin criterio territorial</h3>
                 <p class="mt-4 text-base leading-7 text-muted-foreground">Cuando no se incorpora realidad productiva, turística, comunitaria y física de la red vial, la inversión pierde impacto y legitimidad.</p>
               </article>
@@ -397,17 +417,17 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 grid gap-6 lg:grid-cols-3">
-              <article class="animate-on-scroll rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
+              <article class="animate-on-scroll brand-outline-panel rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
                 <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Diferenciador 01</p>
                 <h3 class="mt-3 text-2xl font-extrabold text-primary">Habla el idioma técnico y el idioma institucional</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">No basta con producir análisis. Hay que convertirlo en insumos que alcaldía, UTGV, concejo y comunidad puedan entender y sostener.</p>
               </article>
-              <article class="animate-on-scroll delay-100 rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
+              <article class="animate-on-scroll delay-100 brand-outline-panel rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
                 <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Diferenciador 02</p>
                 <h3 class="mt-3 text-2xl font-extrabold text-primary">Alinea inversión, cumplimiento y continuidad</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">El valor no está solo en priorizar obras, sino en dejar estructura para que la inversión tenga defensa normativa, sentido territorial y continuidad.</p>
               </article>
-              <article class="animate-on-scroll delay-200 rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
+              <article class="animate-on-scroll delay-200 brand-outline-panel rounded-[2rem] border border-border bg-surface p-8 shadow-sm">
                 <p class="text-sm font-bold uppercase tracking-[0.16em] text-accent">Diferenciador 03</p>
                 <h3 class="mt-3 text-2xl font-extrabold text-primary">Trabaja sobre problemas reales del cantón</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">Cartago no se gestiona igual que Osa o Cañas. La lectura del territorio cambia, y la estrategia técnica también.</p>
@@ -432,7 +452,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 space-y-4" data-services-accordion>
-              <article class="animate-on-scroll overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm">
+              <article class="animate-on-scroll overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm brand-outline-panel">
                 <h3>
                   <button
                     type="button"
@@ -446,7 +466,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       <span class="block text-xs font-bold uppercase tracking-[0.18em] text-accent">Servicio 01</span>
                       <span class="mt-2 block text-xl font-extrabold text-primary sm:text-2xl">Planes Viales Quinquenales de Conservación y Desarrollo (PVQCD)</span>
                     </span>
-                    <span class="text-3xl font-light text-accent" aria-hidden="true">+</span>
+                    <span class="accordion-indicator is-open" aria-hidden="true" data-accordion-indicator></span>
                   </button>
                 </h3>
                 <div
@@ -461,10 +481,10 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       Elaboramos la hoja de ruta a cinco años para la inversión en caminos públicos, definiendo prioridades entre mantenimiento
                       rutinario, periódico, rehabilitación y mejoramiento, según criterios de ingeniería y necesidades del cantón.
                     </p>
-                    <ul class="space-y-3 text-sm leading-7 text-muted-foreground sm:text-base">
-                      <li>• Priorización técnica de intervenciones.</li>
-                      <li>• Vinculación con desarrollo agropecuario, turístico e industrial.</li>
-                      <li>• Base documental para continuidad más allá de cambios políticos.</li>
+                    <ul class="brand-bullet-list text-sm leading-7 text-muted-foreground sm:text-base">
+                      <li><span class="brand-icon-badge brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="m5 12 4 4L19 6" /></svg></span><span>Priorización técnica de intervenciones.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 17h16M7 14l3-4 3 3 4-6" /></svg></span><span>Vinculación con desarrollo agropecuario, turístico e industrial.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M6 7h12M6 12h12M6 17h8" /></svg></span><span>Base documental para continuidad más allá de cambios políticos.</span></li>
                     </ul>
                     <div class="mt-6">
                       <a href="/planes-viales-quinquenales-municipales/" class="inline-flex items-center text-sm font-bold text-accent hover:text-accent/80">Leer más sobre Planes Viales Quinquenales <span aria-hidden="true" class="ml-1">&rarr;</span></a>
@@ -473,7 +493,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                 </div>
               </article>
   
-              <article class="animate-on-scroll delay-100 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm">
+              <article class="animate-on-scroll delay-100 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm brand-outline-panel">
                 <h3>
                   <button
                     type="button"
@@ -487,7 +507,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       <span class="block text-xs font-bold uppercase tracking-[0.18em] text-accent">Servicio 02</span>
                       <span class="mt-2 block text-xl font-extrabold text-primary sm:text-2xl">Inventarios de la Red Vial Cantonal</span>
                     </span>
-                    <span class="text-3xl font-light text-accent" aria-hidden="true">+</span>
+                    <span class="accordion-indicator" aria-hidden="true" data-accordion-indicator></span>
                   </button>
                 </h3>
                 <div
@@ -502,16 +522,16 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       Ejecutamos levantamiento de datos físicos en campo para actualizar el estado de la superficie de ruedo, drenajes y obras
                       complementarias, incluyendo la incorporación y codificación de nuevos caminos ante el MOPT.
                     </p>
-                    <ul class="space-y-3 text-sm leading-7 text-muted-foreground sm:text-base">
-                      <li>• Diagnóstico físico del estado vial real.</li>
-                      <li>• Insumos para matrices de priorización y presupuestación.</li>
-                      <li>• Actualización técnica de registros cantonales.</li>
+                    <ul class="brand-bullet-list text-sm leading-7 text-muted-foreground sm:text-base">
+                      <li><span class="brand-icon-badge brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21s-6-5.4-6-11a6 6 0 1 1 12 0c0 5.6-6 11-6 11Z" /><circle cx="12" cy="10" r="2.2" /></svg></span><span>Diagnóstico físico del estado vial real.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M7 14l3-4 3 3 4-6" /></svg></span><span>Insumos para matrices de priorización y presupuestación.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M7 7h10v10H7z" /><path stroke-linecap="round" stroke-linejoin="round" d="M10 3v4M14 3v4M10 17v4M14 17v4M17 10h4M17 14h4M3 10h4M3 14h4" /></svg></span><span>Actualización técnica de registros cantonales.</span></li>
                     </ul>
                   </div>
                 </div>
               </article>
   
-              <article class="animate-on-scroll delay-200 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm">
+              <article class="animate-on-scroll delay-200 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm brand-outline-panel">
                 <h3>
                   <button
                     type="button"
@@ -525,7 +545,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       <span class="block text-xs font-bold uppercase tracking-[0.18em] text-accent">Servicio 03</span>
                       <span class="mt-2 block text-xl font-extrabold text-primary sm:text-2xl">Valoración de activos viales bajo NICSP</span>
                     </span>
-                    <span class="text-3xl font-light text-accent" aria-hidden="true">+</span>
+                    <span class="accordion-indicator" aria-hidden="true" data-accordion-indicator></span>
                   </button>
                 </h3>
                 <div
@@ -540,16 +560,16 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       Realizamos el avalúo técnico y financiero de la infraestructura vial cantonal, adaptando los registros a las Normas
                       Internacionales de Contabilidad para el Sector Público como parte del cumplimiento obligatorio ante la CGR.
                     </p>
-                    <ul class="space-y-3 text-sm leading-7 text-muted-foreground sm:text-base">
-                      <li>• Respaldo para estados financieros municipales.</li>
-                      <li>• Trazabilidad documental para auditoría.</li>
-                      <li>• Lectura financiera de activos de infraestructura pública.</li>
+                    <ul class="brand-bullet-list text-sm leading-7 text-muted-foreground sm:text-base">
+                      <li><span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M6 14l4-4 3 3 5-6" /></svg></span><span>Respaldo para estados financieros municipales.</span></li>
+                      <li><span class="brand-icon-badge brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7h8M8 12h8M8 17h5" /><path stroke-linecap="round" stroke-linejoin="round" d="M5 4h14v16H5z" /></svg></span><span>Trazabilidad documental para auditoría.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18M7 8.5c0-1.4 1.7-2.5 3.8-2.5h2.4c2.1 0 3.8 1.1 3.8 2.5s-1.7 2.5-3.8 2.5h-2.4C8.7 11 7 12.1 7 13.5S8.7 16 10.8 16h2.4c2.1 0 3.8 1.1 3.8 2.5" /></svg></span><span>Lectura financiera de activos de infraestructura pública.</span></li>
                     </ul>
                   </div>
                 </div>
               </article>
   
-              <article class="animate-on-scroll delay-300 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm">
+              <article class="animate-on-scroll delay-300 overflow-hidden rounded-[1.75rem] border border-border bg-surface shadow-sm brand-outline-panel">
                 <h3>
                   <button
                     type="button"
@@ -563,7 +583,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       <span class="block text-xs font-bold uppercase tracking-[0.18em] text-accent">Servicio 04</span>
                       <span class="mt-2 block text-xl font-extrabold text-primary sm:text-2xl">Diagnósticos participativos y sociales</span>
                     </span>
-                    <span class="text-3xl font-light text-accent" aria-hidden="true">+</span>
+                    <span class="accordion-indicator" aria-hidden="true" data-accordion-indicator></span>
                   </button>
                 </h3>
                 <div
@@ -578,10 +598,10 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                       Facilitamos procesos de consulta con comunidades y Asociaciones de Desarrollo Integral para incorporar necesidades
                       ciudadanas en las matrices de priorización sin sacrificar estructura técnica ni orden de inversión.
                     </p>
-                    <ul class="space-y-3 text-sm leading-7 text-muted-foreground sm:text-base">
-                      <li>• Integración de insumos comunitarios al análisis técnico.</li>
-                      <li>• Soporte para procesos de aprobación y legitimidad política.</li>
-                      <li>• Mejor alineación entre inversión vial y demanda territorial.</li>
+                    <ul class="brand-bullet-list text-sm leading-7 text-muted-foreground sm:text-base">
+                      <li><span class="brand-icon-badge brand-icon-badge--success brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm8 0a3 3 0 1 1 0-6 3 3 0 0 1 0 6ZM3.5 18c.9-2.3 3-3.7 5.5-3.7s4.6 1.4 5.5 3.7M15 14.3c2.3 0 4.3 1.2 5.4 3.2" /></svg></span><span>Integración de insumos comunitarios al análisis técnico.</span></li>
+                      <li><span class="brand-icon-badge brand-icon-badge--accent brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16M12 4v16" /></svg></span><span>Soporte para procesos de aprobación y legitimidad política.</span></li>
+                      <li><span class="brand-icon-badge brand-bullet-icon h-8 w-8 rounded-xl"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4 fill-none stroke-current stroke-[2]"><path stroke-linecap="round" stroke-linejoin="round" d="M4 18h16M5 15c3-2 4-6 7-6s4 4 7 6" /></svg></span><span>Mejor alineación entre inversión vial y demanda territorial.</span></li>
                     </ul>
                   </div>
                 </div>
@@ -606,13 +626,13 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 grid gap-6 xl:grid-cols-3">
-              <article class="animate-on-scroll rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll brand-outline-panel rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
                 <div class="flex items-center justify-between gap-4">
                   <div>
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Municipalidad de Cartago</p>
                     <h3 class="mt-2 text-2xl font-extrabold text-primary">PVQCD 2021–2025</h3>
                   </div>
-                  <span class="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">Urbano + agrícola</span>
+                  <span class="brand-chip rounded-full px-3 py-1 text-xs font-bold">Urbano + agrícola</span>
                 </div>
                 <p class="mt-5 text-base leading-8 text-muted-foreground">
                   Estructuración de la inversión para un cantón central con alta densidad urbana y zonas de fuerte producción agrícola, donde la
@@ -632,20 +652,20 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                     <dd>Estructura de priorización justificable ante auditoría, logrando equilibrar el presupuesto entre rutas de flujo agropecuario y vías de alta densidad urbana sin sesgo político.</dd>
                   </div>
                 </dl>
-                <div class="mt-6 rounded-2xl bg-muted p-5">
+                <div class="mt-6 rounded-2xl brand-soft-panel p-5">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Entregable clave</p>
                   <p class="mt-2 text-base font-bold text-primary">Matriz técnica de distribución de inversión</p>
                   <p class="mt-2 text-sm leading-7 text-muted-foreground">Herramienta base para la toma de decisiones en el concejo municipal y justificación formal ante la Contraloría.</p>
                 </div>
               </article>
   
-              <article class="animate-on-scroll delay-100 rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll delay-100 brand-outline-panel rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
                 <div class="flex items-center justify-between gap-4">
                   <div>
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Municipalidad de Osa</p>
                     <h3 class="mt-2 text-2xl font-extrabold text-primary">PVQCD 2020–2024</h3>
                   </div>
-                  <span class="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">Turismo + conservación</span>
+                  <span class="brand-chip rounded-full px-3 py-1 text-xs font-bold">Turismo + conservación</span>
                 </div>
                 <p class="mt-5 text-base leading-8 text-muted-foreground">
                   Estrategia vial para un territorio extenso, con clima extremo y presión simultánea de conectividad turística, logística y
@@ -665,20 +685,20 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                     <dd>Trazabilidad documental que permitió alinear la inversión de Ley 8114 con las exigencias del MOPT, asegurando la continuidad de la conectividad en áreas sensibles.</dd>
                   </div>
                 </dl>
-                <div class="mt-6 rounded-2xl bg-muted p-5">
+                <div class="mt-6 rounded-2xl brand-soft-panel p-5">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Entregable clave</p>
                   <p class="mt-2 text-base font-bold text-primary">Estrategia vial territorial</p>
                   <p class="mt-2 text-sm leading-7 text-muted-foreground">Criterios técnicos formalizados para balancear exigencias logísticas, turísticas y ambientales en la asignación de recursos.</p>
                 </div>
               </article>
   
-              <article class="animate-on-scroll delay-200 rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll delay-200 brand-outline-panel rounded-[2rem] border border-border bg-surface p-6 shadow-sm">
                 <div class="flex items-center justify-between gap-4">
                   <div>
                     <p class="text-sm font-bold uppercase tracking-[0.18em] text-accent">Municipalidad de Cañas</p>
                     <h3 class="mt-2 text-2xl font-extrabold text-primary">Actualización vial + NICSP</h3>
                   </div>
-                  <span class="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">Inventario + valoración</span>
+                  <span class="brand-chip rounded-full px-3 py-1 text-xs font-bold">Inventario + valoración</span>
                 </div>
                 <p class="mt-5 text-base leading-8 text-muted-foreground">
                   Proyecto integral para la actualización de la red vial cantonal y aplicación de valoraciones financieras orientadas al
@@ -698,7 +718,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                     <dd>Regularización del registro patrimonial del cantón y aseguramiento de la integridad contable, mitigando hallazgos recurrentes por parte de la CGR.</dd>
                   </div>
                 </dl>
-                <div class="mt-6 rounded-2xl bg-muted p-5">
+                <div class="mt-6 rounded-2xl brand-soft-panel p-5">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Entregable clave</p>
                   <p class="mt-2 text-base font-bold text-primary">Inventario actualizado y avalúo vial</p>
                   <p class="mt-2 text-sm leading-7 text-muted-foreground">Soporte directo para la Hacienda Municipal en la presentación de estados financieros en estricto apego a NICSP.</p>
@@ -706,7 +726,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
               </article>
             </div>
   
-            <div class="animate-on-scroll delay-300 mt-10 rounded-[2rem] border border-accent/25 bg-accent/10 p-6 text-sm leading-7 text-accent-foreground sm:text-base">
+            <div class="animate-on-scroll delay-300 mt-10 rounded-[2rem] border border-accent/25 bg-accent/10 p-6 text-sm leading-7 text-accent-foreground sm:text-base brand-outline-panel">
               <strong class="text-primary">Nota de confidencialidad:</strong> Los montos exactos de inversión y las bases de datos viales específicas pertenecen al dominio público de cada municipalidad. Fortamuni expone aquí el modelo de intervención técnico, respetando la reserva de los entregables financieros detallados.
             </div>
   
@@ -738,22 +758,22 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
             </div>
   
             <div class="mt-12 space-y-4">
-              <article class="animate-on-scroll rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll brand-outline-panel rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
                 <h3 class="text-xl font-extrabold text-primary">¿Qué tipo de necesidad atiende Fortamuni?</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">Procesos como planes viales quinquenales, inventarios de la red vial cantonal, valoración de activos bajo NICSP, levantamiento técnico, priorización de inversión y articulación entre criterio técnico y aprobación institucional.</p>
               </article>
   
-              <article class="animate-on-scroll delay-100 rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll delay-100 brand-outline-panel rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
                 <h3 class="text-xl font-extrabold text-primary">¿Fortamuni sirve solo para municipalidades grandes?</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">No. La lógica de planificación, trazabilidad y priorización aplica tanto a cantones extensos como a municipalidades con presión urbana, actividad agrícola, vocación turística o necesidad de ordenar financieramente sus activos viales.</p>
               </article>
   
-              <article class="animate-on-scroll delay-200 rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll delay-200 brand-outline-panel rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
                 <h3 class="text-xl font-extrabold text-primary">¿Cómo ayuda esto frente a auditoría o control institucional?</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">El enfoque está orientado a producir entregables con sustento técnico, trazabilidad metodológica y alineación con exigencias regulatorias que impactan la inversión vial, la valoración de activos y la defensa de decisiones ante la CGR y otros actores de control.</p>
               </article>
   
-              <article class="animate-on-scroll delay-300 rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
+              <article class="animate-on-scroll delay-300 brand-outline-panel rounded-[1.5rem] border border-border bg-surface p-6 shadow-sm">
                 <h3 class="text-xl font-extrabold text-primary">¿Qué ocurre después de agendar el diagnóstico?</h3>
                 <p class="mt-4 text-base leading-8 text-muted-foreground">Se revisa el contexto del requerimiento y se coordina una conversación diagnóstica inicial. Con eso se define si procede revisión documental, alcance técnico específico o una ruta de trabajo recomendada para la municipalidad.</p>
               </article>
@@ -763,12 +783,13 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
   
         <section
           id="contacto"
-          class="bg-primary px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
+          class="brand-hero-glow relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-24"
           aria-label="Contacto"
           data-section
         >
+          <div class="brand-grid-overlay absolute inset-0 opacity-25"></div>
           <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div class="animate-on-scroll text-primary-foreground">
+            <div class="animate-on-scroll relative text-primary-foreground">
               <p class="text-sm font-bold uppercase tracking-[0.2em] text-accent">Contacto</p>
               <h2 class="mt-4 text-3xl font-extrabold sm:text-4xl">Diagnóstico técnico inicial para ordenar el caso antes de definir alcance, inversión o entregables.</h2>
               <p class="mt-6 text-lg leading-8 text-primary-foreground/78">
@@ -776,30 +797,30 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
               </p>
   
               <div class="mt-10 space-y-5">
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Incluye</p>
                   <p class="mt-2 text-lg font-bold">Lectura inicial del caso, necesidad institucional y cuello de botella prioritario</p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Resultado</p>
                   <p class="mt-2 text-lg font-bold">Siguiente paso recomendado con criterio técnico y lectura institucional</p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Dirigido a</p>
                   <p class="mt-2 text-lg font-bold">Municipalidades de Costa Rica, UTGV, alcaldías, concejos, proveeduría y hacienda</p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Qué ocurre después</p>
                   <p class="mt-2 text-lg font-bold">Se coordina la conversación diagnóstica y luego se plantea la ruta recomendada</p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div class="brand-outline-panel rounded-2xl border border-white/10 bg-white/6 p-5 backdrop-blur-sm">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Correo de contacto</p>
                   <p class="mt-2 text-lg font-bold">info@fortamuni.com</p>
                 </div>
               </div>
             </div>
   
-            <div class="animate-on-scroll delay-100 rounded-[2rem] bg-surface p-6 shadow-2xl shadow-black/20 sm:p-8">
+            <div class="animate-on-scroll delay-100 relative rounded-[2rem] bg-surface p-6 shadow-2xl shadow-black/20 sm:p-8 brand-outline-panel">
               <form id="contact-form" novalidate class="space-y-6" data-contact-form>
                 <div class="rounded-2xl border border-border bg-muted p-5">
                   <p class="text-sm font-semibold uppercase tracking-[0.16em] text-accent">Antes de enviarlo</p>
@@ -862,7 +883,7 @@ const ogImage = 'https://fortamuni.cr/og-image.jpg';
                 <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <button
                     type="submit"
-                    class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground transition hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
+                    class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)] disabled:cursor-not-allowed disabled:opacity-60"
                     data-submit-button
                     aria-busy="false"
                   >

@@ -1,4 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <rect width="32" height="32" rx="6" fill="#1a365d"/>
-  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="20" fill="#d69e2e">F</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="favicon-title favicon-desc">
+  <title id="favicon-title">FortaMuni favicon</title>
+  <desc id="favicon-desc">Versión simplificada del escudo FortaMuni.</desc>
+  <defs>
+    <linearGradient id="favicon-shield" x1="10" y1="8" x2="54" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3b82c4" />
+      <stop offset="1" stop-color="#15558c" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#edf7fc" />
+  <path d="M32 10c14 0 24 4 24 4v17c0 16-10.2 29.8-24 37-13.8-7.2-24-21-24-37V14s10-4 24-4Z" fill="url(#favicon-shield)" />
+  <path d="M22 34 29.5 41 45.5 25" fill="none" stroke="#f6a63a" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" />
+  <path d="M40.5 42.4c6.3-1 10.7-5.4 12.6-11.6-1.3 5.5-3.5 10.7-7.3 15.3-2.9 3.5-6.5 6.5-10.8 8.7 2.6-2.8 4.1-7.6 5.5-12.4Z" fill="#49a86c" />
 </svg>

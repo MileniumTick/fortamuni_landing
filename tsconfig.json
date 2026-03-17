@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
-    "types": []
+    "types": ["node"]
   },
-  "include": ["src", "functions"]
+  "include": ["src", "functions", "tests"]
 }

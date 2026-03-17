@@ -31,7 +31,7 @@ const contactHref = `${navBase}#contacto`;
     {keywords && <meta name="keywords" content={keywords} />}
     <meta name="author" content="Fortamuni" />
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#1a365d" />
+    <meta name="theme-color" content="#15558c" />
     <meta name="color-scheme" content="light" />
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -72,15 +72,12 @@ const contactHref = `${navBase}#contacto`;
         class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
       >
         <a href={homeHref} class="flex items-center gap-3" aria-label="Ir al inicio de Fortamuni">
-          <span
-            class="flex h-11 w-11 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 text-lg font-extrabold text-accent"
-            aria-hidden="true"
-          >
-            F
+          <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/8 p-1.5 shadow-lg shadow-black/10" aria-hidden="true">
+            <img src="/fortamuni-mark.svg" alt="" class="h-full w-full" loading="eager" decoding="async" />
           </span>
           <span class="flex flex-col">
             <span class="text-lg font-extrabold tracking-[0.24em] text-primary-foreground">FORTAMUNI</span>
-            <span class="text-xs font-medium text-primary-foreground/70">Gestión vial municipal</span>
+            <span class="text-xs font-medium text-primary-foreground/72">Gestión vial municipal</span>
           </span>
         </a>
 
@@ -98,20 +95,20 @@ const contactHref = `${navBase}#contacto`;
         </button>
 
         <div class="hidden items-center gap-8 lg:flex">
-          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-accent" href={`${navBase}#nosotros`} data-nav-link>Nosotros</a>
-          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-accent" href={`${navBase}#servicios`} data-nav-link>Servicios</a>
-          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-accent" href={`${navBase}#casos-de-exito`} data-nav-link>Casos de éxito</a>
-          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-accent" href={contactHref} data-nav-link>Contacto</a>
+          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-white" href={`${navBase}#nosotros`} data-nav-link>Nosotros</a>
+          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-white" href={`${navBase}#servicios`} data-nav-link>Servicios</a>
+          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-white" href={`${navBase}#casos-de-exito`} data-nav-link>Casos de éxito</a>
+          <a class="text-sm font-medium text-primary-foreground/80 transition hover:text-white" href={contactHref} data-nav-link>Contacto</a>
           <a
             href={contactHref}
-            class="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-gold-light"
+            class="inline-flex items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]"
           >
             Agendar diagnóstico
           </a>
         </div>
       </nav>
 
-      <div id="mobile-menu" class="mobile-menu border-t border-white/10 bg-primary lg:hidden">
+      <div id="mobile-menu" class="mobile-menu border-t border-white/10 bg-primary-deep lg:hidden">
         <div class="space-y-1 px-4 py-4 sm:px-6">
           <a class="block rounded-lg px-4 py-3 text-sm font-medium text-primary-foreground/85 hover:bg-white/5" href={`${navBase}#nosotros`} data-nav-link>Nosotros</a>
           <a class="block rounded-lg px-4 py-3 text-sm font-medium text-primary-foreground/85 hover:bg-white/5" href={`${navBase}#servicios`} data-nav-link>Servicios</a>
@@ -119,7 +116,7 @@ const contactHref = `${navBase}#contacto`;
           <a class="block rounded-lg px-4 py-3 text-sm font-medium text-primary-foreground/85 hover:bg-white/5" href={contactHref} data-nav-link>Contacto</a>
           <a
             href={contactHref}
-            class="mt-3 inline-flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-bold text-accent-foreground"
+            class="mt-3 inline-flex w-full items-center justify-center rounded-full bg-accent px-5 py-3 text-sm font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]"
           >
             Agendar diagnóstico
           </a>
@@ -134,7 +131,13 @@ const contactHref = `${navBase}#contacto`;
     <footer class="border-t border-border bg-surface px-4 py-12 sm:px-6 lg:px-8">
       <div class="mx-auto grid max-w-7xl gap-8 text-sm text-muted-foreground md:grid-cols-1 lg:grid-cols-3">
         <div>
-          <p class="font-bold text-primary text-lg">Fortamuni</p>
+          <img
+            src="/fortamuni-logo.svg"
+            alt="Fortamuni"
+            class="h-14 w-auto"
+            loading="lazy"
+            decoding="async"
+          />
           <p class="mt-4">Consultoría especializada en gestión vial municipal y planificación estratégica para gobiernos locales de Costa Rica.</p>
         </div>
         <div>

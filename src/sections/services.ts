@@ -12,6 +12,8 @@ export function initServices(): void {
     }
 
     if (isOpen) {
+      content.hidden = false;
+      content.setAttribute('aria-hidden', 'false');
       content.classList.add('open');
       content.style.maxHeight = `${content.scrollHeight}px`;
       return;
@@ -19,6 +21,8 @@ export function initServices(): void {
 
     content.style.maxHeight = '0px';
     content.classList.remove('open');
+    content.hidden = true;
+    content.setAttribute('aria-hidden', 'true');
   };
 
   const closeAll = () => {
@@ -27,9 +31,9 @@ export function initServices(): void {
       const content = contentId ? document.getElementById(contentId) : null;
 
       trigger.setAttribute('aria-expanded', 'false');
-      const icon = trigger.querySelector('span[aria-hidden="true"]');
+      const icon = trigger.querySelector<HTMLElement>('[data-accordion-indicator]');
       if (icon) {
-        icon.textContent = '+';
+        icon.classList.remove('is-open');
       }
 
       setContentState(content, false);
@@ -42,6 +46,11 @@ export function initServices(): void {
   };
 
   triggers.forEach((trigger) => {
+    const initialContentId = trigger.getAttribute('aria-controls');
+    const initialContent = initialContentId ? document.getElementById(initialContentId) : null;
+    const isInitiallyExpanded = trigger.getAttribute('aria-expanded') === 'true';
+    setContentState(initialContent, isInitiallyExpanded);
+
     trigger.addEventListener('click', () => {
       const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
       const contentId = trigger.getAttribute('aria-controls');
@@ -54,9 +63,9 @@ export function initServices(): void {
       }
 
       trigger.setAttribute('aria-expanded', 'true');
-      const icon = trigger.querySelector('span[aria-hidden="true"]');
+      const icon = trigger.querySelector<HTMLElement>('[data-accordion-indicator]');
       if (icon) {
-        icon.textContent = '−';
+        icon.classList.add('is-open');
       }
 
       setContentState(content, true);
