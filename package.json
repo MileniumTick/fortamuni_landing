@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
@@ -16,6 +16,6 @@
     "vite": "^6.0.0"
   },
   "dependencies": {
-    "chart.js": "^4.5.1"
+    "astro": "^6.0.5"
   }
 }
