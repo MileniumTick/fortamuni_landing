@@ -18,18 +18,6 @@ export interface ValidationResult {
   errors: Record<string, string>;
 }
 
-export interface CaseStudyChart {
-  canvasId: string;
-  type: 'doughnut' | 'bar';
-  data: {
-    labels: string[];
-    values: number[];
-    colors: string[];
-  };
-  title: string;
-  horizontal?: boolean;
-}
-
 export interface SectionModule {
   init: () => void;
   destroy?: () => void;

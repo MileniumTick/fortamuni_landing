@@ -10,6 +10,10 @@ export default defineConfig({
     target: 'es2022',
     minify: 'esbuild',
     rollupOptions: {
+      input: {
+        main: 'index.html',
+        pvqcd: 'planes-viales-quinquenales-municipales/index.html'
+      },
       output: {
         manualChunks: {
           chartjs: ['chart.js/auto'],

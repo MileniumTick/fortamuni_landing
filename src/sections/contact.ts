@@ -104,7 +104,7 @@ export function initContact(): void {
     submitButton.disabled = true;
     submitButton.textContent = 'Enviando...';
     submitButton.setAttribute('aria-busy', 'true');
-    updateStatus('Enviando su consulta...', false);
+    updateStatus('Enviando su solicitud de diagnóstico...', false);
 
     try {
       const response = await fetch('/api/contact', {
@@ -118,17 +118,17 @@ export function initContact(): void {
       const result = (await response.json()) as ApiResponse;
 
       if (!response.ok || !result.success) {
-        throw new Error(result.error ?? 'No fue posible enviar la consulta.');
+        throw new Error(result.error ?? 'No fue posible registrar la solicitud de diagnóstico.');
       }
 
       form.reset();
-      updateStatus('Consulta enviada correctamente. Le contactaremos pronto.', false);
+      updateStatus('Solicitud enviada correctamente. Le contactaremos para coordinar el diagnóstico.', false);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Ocurrió un error inesperado.';
       updateStatus(message, true);
     } finally {
       submitButton.disabled = false;
-      submitButton.textContent = 'Solicitar diagnóstico técnico';
+      submitButton.textContent = 'Agendar diagnóstico';
       submitButton.setAttribute('aria-busy', 'false');
     }
   });
