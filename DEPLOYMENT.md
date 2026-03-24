@@ -28,6 +28,7 @@ Importante:
 
 - `RESEND_API_KEY` y demas variables de correo van **solo** en Cloudflare Pages (server env vars).
 - No exponer estas variables en frontend.
+- Valor recomendado para `CONTACT_EMAIL`: `fortamunisaskya@gmail.com`.
 
 Para entorno local de Functions:
 

@@ -149,7 +149,7 @@ export const onRequestPost = async ({
       return jsonResponse({ success: false, error: 'Falta configurar el remitente del formulario.' }, 500);
     }
 
-    const contactEmail = env.CONTACT_EMAIL ?? 'info@fortamuni.com';
+    const contactEmail = env.CONTACT_EMAIL ?? 'fortamunisaskya@gmail.com';
     const senderName = env.CONTACT_SENDER_NAME?.trim() || 'Fortamuni Web';
 
     const normalizedPayload = {
