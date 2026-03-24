@@ -16,7 +16,7 @@ describe('layout metadata and brand assets', () => {
     expect(layout).toContain('<meta name="theme-color" content="#15558c" />');
     expect(layout).toContain('<meta name="color-scheme" content="light" />');
     expect(layout).toContain('<link rel="icon" type="image/svg+xml" href="/favicon.svg" />');
-    expect(layout).toContain('ogImage = "https://fortamuni.cr/og-image.jpg"');
+    expect(layout).toContain('ogImage = "https://fortamuni.com/og-image.jpg"');
     expect(layout).toContain('src="/fortamuni-mark.svg"');
     expect(layout).toContain('src="/fortamuni-logo.svg"');
     expect(layout).toContain('href="#contenido-principal"');

@@ -55,7 +55,7 @@ Cloudflare detecta `functions/` automaticamente para exponer `/api/contact`.
 
 ## SEO y dominio
 
-1. Configurar dominio custom (por ejemplo `fortamuni.cr`) en Pages.
+1. Configurar dominio custom (por ejemplo `fortamuni.com`) en Pages.
 2. Verificar que los metadatos SEO usen el dominio final:
    - canonical
    - `og:url`

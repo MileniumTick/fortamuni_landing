@@ -20,7 +20,7 @@ describe('homepage brand surfaces', () => {
   it('publishes homepage structured data with the refreshed brand identity', () => {
     expect(homepage).toContain('"@type": "ProfessionalService"');
     expect(homepage).toContain('"name": "Fortamuni"');
-    expect(homepage).toContain('const logoImage = \'https://fortamuni.cr/fortamuni-logo.svg\';');
-    expect(homepage).toContain('"image": "https://fortamuni.cr/og-image.jpg"');
+    expect(homepage).toContain('const logoImage = \'https://fortamuni.com/fortamuni-logo.svg\';');
+    expect(homepage).toContain('"image": "https://fortamuni.com/og-image.jpg"');
   });
 });
