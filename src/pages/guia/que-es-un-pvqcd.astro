@@ -2,11 +2,22 @@
 import Layout from "../../layouts/Layout.astro";
 
 const title = '¿Qué es un PVQCD y cómo se estructura? | Guía Fortamuni';
-const description = 'Todo lo que necesita saber sobre los Planes Viales Quinquenales de Conservación y Desarrollo (PVQCD) en Costa Rica.';
+const description = 'Guía completa sobre el Plan Vial Quinquenal de Conservación y Desarrollo (PVQCD) en Costa Rica: qué es, para qué sirve, sus componentes clave y el proceso de aprobación municipal.';
 const canonical = 'https://fortamuni.com/guia/que-es-un-pvqcd/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: '¿Qué es un PVQCD?', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,58 +36,74 @@ const canonical = 'https://fortamuni.com/guia/que-es-un-pvqcd/';
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                El PVQCD es la brújula técnica y legal de la inversión vial municipal en Costa Rica. Entender su alcance es vital para evitar improvisaciones y garantizar una red cantonal óptima a mediano plazo.
+                El PVQCD es la herramienta técnica y legal que ordena la inversión vial de una municipalidad durante cinco años. Sin él, la UTGV no puede ejecutar obras ni justificar el uso de fondos de Ley 8114 ante la Contraloría General.
               </p>
             </div>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Definición y alcance del PVQCD</h2>
             <p>
-              El Plan Vial Quinquenal de Conservación y Desarrollo (PVQCD) es el instrumento rector y la principal herramienta de planificación estratégica con la que cuenta una municipalidad en Costa Rica para gestionar su infraestructura vial. Proyectado a un horizonte de cinco años, este plan establece la hoja de ruta detallada que determinará qué caminos de la red vial cantonal serán intervenidos, en qué momento y con qué tipo de tratamiento específico (mantenimiento rutinario, periódico, rehabilitación o mejoramiento).
+              El Plan Vial Quinquenal de Conservación y Desarrollo (PVQCD) es el instrumento rector de la planificación estratégica de la red vial en cualquier municipalidad de Costa Rica. Proyectado a un horizonte de cinco años, define qué caminos de la red cantonal se van a intervenir, en qué momento y con qué tipo de tratamiento: mantenimiento rutinario, periódico, rehabilitación o mejoramiento.
             </p>
             <p>
-              Más allá de ser un simple cronograma de obras, el PVQCD es un mandato legal ineludible estipulado por la normativa asociada a la Ley 8114 y la Ley 9329. Su elaboración y cumplimiento son requisitos obligatorios para que los gobiernos locales puedan utilizar los recursos transferidos por el Estado, asegurando que la inversión no responda a la improvisación, sino a una estrategia integral de conservación del patrimonio vial.
+              El PVQCD no es opcional. La normativa asociada a la <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">Ley 8114 y la Ley 9329</a> lo convierte en requisito para que los gobiernos locales puedan usar los recursos transferidos por el Estado. Sin un plan vigente y bien estructurado, la municipalidad opera sin respaldo documental, y eso la expone a los cuestionamientos de la Contraloría General.
             </p>
             <p>
-              El alcance de este documento abarca la totalidad de la red cantonal y sirve como el marco de referencia único para la formulación de los Planes Operativos Anuales (POA) y los presupuestos ordinarios y extraordinarios. Sin un PVQCD vigente y bien estructurado, la municipalidad se arriesga a operar a ciegas, exponiéndose al cuestionamiento de la Contraloría General de la República (CGR).
+              El plan también es la base del Plan Operativo Anual (POA) y los presupuestos ordinarios y extraordinarios. Todo el ciclo de planificación municipal parte de aquí.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Componentes esenciales del documento</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Componentes que no pueden faltar</h2>
             <p>
-              La formulación de un PVQCD robusto requiere la integración de múltiples componentes técnicos y financieros. En primer lugar, debe sustentarse en un diagnóstico exhaustivo y actualizado, respaldado por un inventario físico de la red vial cantonal que detalle la longitud, el tipo de superficie, el estado de conservación y la infraestructura de drenaje asociada a cada ruta.
+              Un PVQCD sólido tiene tres pilares técnicos. El primero es el diagnóstico: un <a href="/inventario-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">inventario físico actualizado de la red vial cantonal</a> que detalle longitud, tipo de superficie, estado de conservación y la infraestructura de drenaje asociada a cada ruta. Planificar sin ese diagnóstico es planificar a ciegas.
             </p>
             <p>
-              Un segundo pilar fundamental es el modelo de priorización. El plan debe incluir una matriz matemática y objetiva que pondere variables como el flujo vehicular, la importancia productiva y el acceso a servicios básicos. Esta herramienta es la que permite ordenar de manera técnica los proyectos, determinando cuáles tramos urgen de intervención para maximizar el impacto social y económico de la inversión.
+              El segundo pilar es el modelo de priorización: una matriz matemática y objetiva que pondere variables como el flujo vehicular, la importancia productiva y el acceso a servicios básicos. Esta herramienta determina cuáles tramos son urgentes, cuáles pueden esperar y en qué orden se asignan los recursos disponibles. Sin ella, cada decisión de inversión puede cuestionarse.
             </p>
             <p>
-              Finalmente, el PVQCD debe contemplar un estudio financiero detallado. Esto implica proyectar los ingresos esperados durante el quinquenio (provenientes de la Ley 8114, fondos propios y otras fuentes), estimar los costos unitarios de las obras planificadas y establecer un cronograma de ejecución plurianual realista, con metas e indicadores medibles que faciliten su posterior evaluación y seguimiento.
+              El tercer pilar es el estudio financiero: la proyección de ingresos esperados durante el quinquenio, los costos estimados por obra y el cronograma de ejecución plurianual. Un plan con obras que la municipalidad no puede financiar o ejecutar en los plazos previstos no sirve de respaldo ante auditoría —y tampoco se ejecuta en la práctica.
             </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Los tres pilares del PVQCD</p>
+              <ul class="space-y-2 text-base text-muted-foreground mt-0 mb-0">
+                <li><strong class="text-primary">1. Diagnóstico:</strong> Inventario físico actualizado de la red vial cantonal</li>
+                <li><strong class="text-primary">2. Priorización:</strong> Matriz multicriterio para ranking objetivo de intervenciones</li>
+                <li><strong class="text-primary">3. Proyección financiera:</strong> Costeo y cronograma realista por año del quinquenio</li>
+              </ul>
+            </div>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">El ciclo de aprobación municipal</h2>
             <p>
-              El proceso de creación y validación de un PVQCD es un esfuerzo articulado que involucra tanto aspectos técnicos como participativos. El ciclo inicia en la Unidad Técnica de Gestión Vial (UTGV), encargada de recopilar la información, aplicar las matrices de priorización y redactar el borrador técnico del plan, garantizando la rigurosidad y viabilidad de las propuestas.
+              El proceso empieza en la UTGV: recopila la información, aplica las matrices de priorización y redacta el borrador técnico del plan. Con ese borrador listo, el documento pasa por consulta y validación ciudadana: las Juntas Viales Cantonales, los Concejos de Distrito y las Asociaciones de Desarrollo incorporan las necesidades de las comunidades. Sin esta etapa, el plan carece de legitimidad social.
             </p>
             <p>
-              Posteriormente, el documento debe someterse a un proceso de consulta y validación ciudadana. A través de mecanismos como las Juntas Viales Cantonales y la participación de los Concejos de Distrito y Asociaciones de Desarrollo, se incorporan las necesidades de las comunidades. Esta etapa es crucial para dotar al plan de legitimidad social y asegurar que responda a las realidades de cada sector del cantón.
-            </p>
-            <p>
-              El ciclo culmina con la presentación del plan ante el concejo municipal. Corresponde a los regidores discutir y aprobar formalmente el PVQCD, convirtiéndolo en un instrumento de política pública local de acatamiento obligatorio. A partir de ese momento, la alcaldía y la UTGV tienen el deber de ejecutar estrictamente lo planificado y aprobado.
+              El ciclo termina con la presentación al Concejo Municipal. Los regidores discuten y aprueban formalmente el PVQCD, convirtiéndolo en política pública local de acatamiento obligatorio. A partir de ese momento, la alcaldía y la UTGV tienen el deber de ejecutar lo planificado y aprobado.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Ejemplos de aplicación práctica</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo protege el plan a la administración municipal</h2>
             <p>
-              En la práctica, un PVQCD bien estructurado resuelve dilemas complejos de la administración municipal. Por ejemplo, proporciona el sustento técnico indispensable para justificar por qué se prioriza la inversión en la rehabilitación de una ruta rural de alto impacto agrícola, por encima de una solicitud comunitaria para asfaltar una vía urbana de bajo tránsito, neutralizando presiones políticas sin fundamento.
+              El PVQCD resuelve dilemas concretos de gestión. Cuando una Asociación de Desarrollo exige que se asfalte una calle de bajo tránsito, la matriz de priorización permite responder con datos: esa vía está en el año tres del plan porque una ruta rural agrícola con cinco veces más tránsito pesado fue priorizada antes. Eso neutraliza la presión política sin necesidad de confrontación.
             </p>
             <p>
-              Asimismo, el plan quinquenal es la herramienta principal de defensa ante los entes fiscalizadores. Cuando se requiere realizar modificaciones al presupuesto o trasladar partidas, el PVQCD permite sustentar ante la CGR que dichos cambios obedecen a un ajuste estratégico previamente contemplado o a una emergencia justificada, manteniendo la trazabilidad y la legalidad de las acciones.
+              Cuando hay cambios de administración —algo que sucede cada cuatro años— el PVQCD actúa como ancla técnica. Los proyectos estratégicos siguen su curso porque están documentados y aprobados. La nueva administración no reinicia desde cero.
             </p>
             <p>
-              A largo plazo, el PVQCD garantiza la continuidad institucional. Frente a los cambios de administración o rotación del concejo municipal, este plan actúa como un ancla técnica que asegura que los proyectos viales estratégicos sigan su curso a lo largo del quinquenio, evitando que la infraestructura cantonal sufra retrocesos por la falta de una visión sostenida.
+              Y cuando la CGR audita, el plan es la primera línea de defensa. Si las decisiones de inversión son trazables al PVQCD y los datos son consistentes con el inventario, los hallazgos son mínimos.
             </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ Servicio: elaboración de Planes Viales Quinquenales con Fortamuni</a></li>
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario de la Red Vial Cantonal: el diagnóstico que sustenta el plan</a></li>
+                <li><a href="/guia/como-priorizar-inversion-en-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Guía: cómo construir matrices de priorización vial defendibles</a></li>
+                <li><a href="/cumplimiento-ley-8114-ley-9329/" class="text-primary hover:text-accent font-medium transition">→ Cumplimiento Ley 8114 y 9329: el marco legal que obliga el PVQCD</a></li>
+              </ul>
+            </div>
   
             <div class="rounded-2xl bg-surface p-8 border border-border mt-12 mb-8 text-center">
-              <h3 class="text-2xl font-bold text-primary mb-4">¿Requiere actualizar o formular el PVQCD de su municipalidad?</h3>
+              <h3 class="text-2xl font-bold text-primary mb-4">¿Necesita actualizar o formular el PVQCD de su municipalidad?</h3>
               <p class="text-muted-foreground mb-6">
-                Asegure sus recursos de Ley 8114 y estructure un plan quinquenal blindado técnicamente.
+                Asegure los recursos de Ley 8114 y estructure un plan quinquenal con soporte técnico ante CGR y MOPT.
               </p>
               <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]">
                 Agendar diagnóstico técnico

@@ -1,12 +1,23 @@
 ---
 import Layout from "../layouts/Layout.astro";
 
-const title = 'Inventario de la Red Vial Cantonal en Costa Rica | Fortamuni';
-const description = 'Actualice el inventario de la red vial cantonal con metodología de campo, trazabilidad técnica y alineación con MOPT para mejorar planificación y presupuesto municipal.';
+const title = 'Inventario Red Vial Cantonal Costa Rica | Fortamuni';
+const description = 'Actualice el inventario de la red vial cantonal con metodología de campo alineada a Decreto 38578-MOPT. Base técnica para planificar, presupuestar y cumplir requerimientos ante CGR.';
 const canonical = 'https://fortamuni.com/inventario-red-vial-cantonal/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'Inventario de la Red Vial Cantonal', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,53 +36,68 @@ const canonical = 'https://fortamuni.com/inventario-red-vial-cantonal/';
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                Un inventario de la red vial cantonal desactualizado obliga a decidir sin evidencia. Con datos de campo actualizados, la UTGV puede planificar intervenciones, sustentar presupuesto y cumplir requerimientos del MOPT con mayor certeza.
+                Un inventario vial desactualizado obliga a la UTGV a decidir sin evidencia. Con datos de campo actualizados y alineados al Decreto 38578-MOPT, la municipalidad puede planificar intervenciones, sustentar presupuesto y cumplir requerimientos del MOPT con respaldo real.
               </p>
             </div>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">¿Qué es el inventario de la red vial cantonal y por qué debe actualizarse?</h2>
             <p>
-              El inventario de la red vial cantonal es el registro oficial, técnico y físico, de la totalidad de los caminos, puentes y obras complementarias que se encuentran bajo la administración de una municipalidad. Más allá de ser una simple base de datos, constituye la herramienta primigenia y el cimiento fundamental sobre el cual se sustenta cualquier esfuerzo de planificación, inversión y mantenimiento de la infraestructura local. Este registro detalla las características geométricas, los tipos de superficie de ruedo, el estado de conservación y la conectividad de cada tramo vial del cantón.
+              El inventario de la red vial cantonal es el registro oficial, técnico y físico de la totalidad de los caminos, puentes y obras complementarias bajo administración municipal. No es un archivo estático: es la herramienta base sobre la cual se sustenta cualquier esfuerzo de planificación, inversión y mantenimiento de la infraestructura local. Cuando ese registro está desactualizado, todo lo demás falla: el <a href="/planes-viales-quinquenales-municipales/" class="text-accent hover:text-accent/80 font-medium">Plan Vial Quinquenal</a> se construye sobre datos falsos, la priorización pierde validez y la UTGV no puede defender sus decisiones ante auditoría.
             </p>
             <p>
-              La actualización rigurosa y periódica de este inventario es una obligación ineludible dictada por la normativa nacional. Sin datos precisos, los procesos de asignación de recursos y la toma de decisiones dentro de la Unidad Técnica de Gestión Vial (UTGV) ocurren a ciegas. Trabajar con información obsoleta genera incongruencias graves, donde se planifican mantenimientos de lastre en rutas que ya fueron asfaltadas, o se ignoran vías que recientemente han asumido una mayor carga vehicular. Además, mantener el inventario al día es el requisito fundamental impuesto por el MOPT y la Contraloría General de la República para garantizar las transferencias de fondos provenientes de la Ley 8114.
+              La normativa es clara: el inventario debe mantenerse actualizado como condición para acceder a los fondos de la <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">Ley 8114</a>. El Decreto Ejecutivo 38578-MOPT establece los criterios técnicos para el levantamiento y registro de la red. Sin datos que cumplan esos estándares, la municipalidad no puede inscribir nuevos caminos en el Registro Vial ni justificar ante el MOPT los kilómetros sobre los cuales calcula su asignación presupuestaria.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Metodología para el levantamiento de datos en campo</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo se hace el levantamiento de campo</h2>
             <p>
-              La actualización de un inventario vial no puede realizarse desde un escritorio; exige un trabajo de campo exhaustivo y una metodología técnica estandarizada. El proceso inicia con la movilización de personal altamente capacitado que recorre cada ruta cantonal para constatar su condición real. Durante este levantamiento, se emplea equipo especializado y sistemas de posicionamiento global (GPS) para georreferenciar los trayectos con precisión milimétrica, asegurando que las trazas coincidan plenamente con la cartografía nacional oficial.
+              El levantamiento no se hace desde un escritorio. Requiere personal técnico que recorra cada ruta cantonal con equipo GPS para georreferenciar los tramos con precisión, asegurando que las trazas coincidan con la cartografía nacional oficial.
             </p>
             <p>
-              Durante la inspección en sitio, el equipo técnico se encarga de recabar variables críticas que van más allá de la simple longitud de la vía. Se evalúa el ancho de la superficie de ruedo, el estado del derecho de vía, y se levanta un registro minucioso de la infraestructura de drenaje mayor y menor, como alcantarillas, cunetas y puentes. Esta recolección sistemática permite identificar patologías prematuras en los pavimentos y vulnerabilidades estructurales, proveyendo a la municipalidad de insumos técnicos vitales para formular proyecciones de inversión correctiva y preventiva de manera certera.
+              En campo se recopilan variables que van más allá de la longitud de la vía: ancho de superficie de ruedo, estado del derecho de vía, condición del sistema de drenaje mayor y menor (alcantarillas, cunetas, puentes), y registro de patologías visibles en el pavimento. Esta información le da a la UTGV insumos concretos para estimar costos de mantenimiento, detectar vulnerabilidades y programar intervenciones preventivas antes de que pequeñas fallas se conviertan en costosas reconstrucciones.
+            </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Variables que se levantan en campo</p>
+              <ul class="space-y-2 text-base text-muted-foreground mt-0 mb-0">
+                <li>• Superficie de ruedo: tipo, ancho y estado de conservación</li>
+                <li>• Sistema de drenaje: cunetas, alcantarillas, vados y puentes</li>
+                <li>• Georreferenciación GPS de cada tramo</li>
+                <li>• Codificación de caminos según estándares MOPT</li>
+                <li>• Obras complementarias: señalización, cordón y caño, aceras</li>
+              </ul>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Integración del inventario con el MOPT y los planes viales</h2>
+            <p>
+              Los datos de campo no tienen valor hasta que se validan ante el MOPT. La Dirección de Planificación Sectorial recibe los formularios, procesa la información y asigna códigos definitivos a los caminos. Ese paso es el que formaliza la existencia de una vía en el sistema nacional y establece la base para el cálculo de recursos.
+            </p>
+            <p>
+              Un inventario validado es también la columna vertebral del <a href="/planes-viales-quinquenales-municipales/" class="text-accent hover:text-accent/80 font-medium">Plan Vial Quinquenal (PVQCD)</a>. No se puede aplicar matrices de priorización técnica si no se conoce con exactitud cuál es el estado real de la red. La combinación de inventario actualizado más PVQCD sólido es el estándar que resiste cualquier auditoría de la CGR.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Integración del inventario con el MOPT y los PVQCD</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Errores frecuentes en la gestión del inventario</h2>
             <p>
-              Recopilar información fidedigna es apenas el primer paso; el valor real de los datos radica en su correcta integración y validación ante los entes rectores. Un inventario vial municipal debe estructurarse obligatoriamente bajo los lineamientos, manuales y formatos de entrega exigidos por el Ministerio de Obras Públicas y Transportes (MOPT). Esta compatibilidad técnica garantiza que la red vial del cantón sea reconocida oficialmente a nivel nacional, consolidando los kilómetros reales sobre los cuales se calcula la asignación presupuestaria anual de la municipalidad.
+              El fallo más común es no reportar cambios de superficie de ruedo. Una vía que se asfaltó hace dos años pero sigue registrada como lastre genera inconsistencias que la CGR detecta en auditoría. Eso altera los modelos de costeo de mantenimiento y genera observaciones que consumen tiempo de los funcionarios.
             </p>
             <p>
-              Adicionalmente, este inventario validado funge como la columna vertebral para la formulación del Plan Vial Quinquenal de Conservación y Desarrollo (PVQCD). Es materialmente imposible aplicar matrices de priorización técnica o formular estrategias a cinco años plazo si no se conoce con exactitud el punto de partida de la red. La sinergia entre un inventario actualizado y un plan quinquenal robusto blinda las decisiones de la alcaldía y de la UTGV, demostrando una gestión vial municipal articulada, eficiente y plenamente transparente ante las auditorías estatales.
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Errores frecuentes al gestionar la red vial</h2>
-            <p>
-              La gestión del inventario vial es susceptible a errores sistémicos que pueden costar millones de colones en recursos no asignados o mal invertidos. El fallo más generalizado es la omisión en el reporte de cambios de superficie de ruedo; por ejemplo, rutas que fueron asfaltadas recientemente pero que en los registros oficiales siguen apareciendo como caminos en tierra o lastre. Esta discrepancia altera severamente los modelos de costeo de mantenimiento y proyecta una imagen de inoperancia técnica ante los entes de control fiscal.
-            </p>
-            <p>
-              Otro error sumamente frecuente son las inconsistencias en las mediciones longitudinales de los tramos y la ausencia total de registros sobre obras complementarias. Municipalidades que no tienen cuantificados sus puentes o sus sistemas de drenaje se ven imposibilitadas de planificar mantenimientos preventivos, provocando que pequeñas fallas estructurales evolucionen hacia colapsos costosos. Superar estas deficiencias mediante un levantamiento profesional es imperativo para resguardar el patrimonio municipal y garantizar la seguridad de los usuarios de la vía.
+              Otro problema frecuente son las mediciones inconsistentes de longitud y la ausencia de registros sobre obras complementarias. Municipalidades sin inventario de puentes no pueden planificar mantenimientos preventivos, lo que deriva en fallas estructurales que resultan mucho más costosas que el mantenimiento que se evitó. Tampoco pueden justificar la valoración de esos activos bajo <a href="/valoracion-activos-viales-nicsp/" class="text-accent hover:text-accent/80 font-medium">NICSP</a> sin el respaldo del inventario físico.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Nuestro servicio de actualización de inventarios viales</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Servicio de acutalización de inventarios viales</h2>
             <p>
-              Comprendemos que el despliegue logístico y técnico requerido para actualizar el inventario de toda la red cantonal suele sobrepasar la capacidad operativa habitual de una UTGV. En Fortamuni ponemos a disposición de los gobiernos locales un equipo de profesionales experimentados, dotados de tecnología de punta y conocimiento profundo de los requerimientos normativos del MOPT. Nuestro servicio asegura un levantamiento topográfico y de infraestructura con los más altos estándares de ingeniería civil.
+              El despliegue logístico de un levantamiento completo supera la capacidad operativa habitual de una UTGV. En Fortamuni hacemos el trabajo de campo con metodología alineada al Decreto 38578-MOPT, procesamos los datos en SIG y entregamos una base georreferenciada, depurada y lista para incorporarse a los sistemas de información municipal y usarse directamente para planificación, valoración patrimonial y presupuestación.
             </p>
-            <p>
-              Le entregamos a su municipalidad una base de datos validable, depurada y georreferenciada, lista para ser incorporada en sus sistemas de información geográfica (SIG) y ser utilizada como insumo directo para su planificación financiera. No deje que un inventario obsoleto condicione el desarrollo de su cantón ni comprometa el giro de los recursos de la Ley 8114. Es el momento de dotar a su gestión vial de criterio técnico fundamentado.
-            </p>
-            <p>
-              Optimice la gestión de sus activos viales y asegure el cumplimiento normativo integral de su municipalidad. Contáctenos hoy mismo para definir la estrategia de levantamiento de su red.
-            </p>
-  
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ Plan Vial Quinquenal (PVQCD): el inventario como base del plan</a></li>
+                <li><a href="/valoracion-activos-viales-nicsp/" class="text-primary hover:text-accent font-medium transition">→ Valoración de Activos Viales bajo NICSP: cómo el inventario alimenta el avalúo</a></li>
+                <li><a href="/cumplimiento-ley-8114-ley-9329/" class="text-primary hover:text-accent font-medium transition">→ Cumplimiento Ley 8114 y 9329: requisitos de inventario para acceder a fondos</a></li>
+                <li><a href="/utgv-planificacion-y-priorizacion-vial/" class="text-primary hover:text-accent font-medium transition">→ UTGV: cómo usar el inventario para priorización vial</a></li>
+              </ul>
+            </div>
+
             <div class="mt-10 mb-8 text-center">
               <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]">
                 Agendar diagnóstico técnico

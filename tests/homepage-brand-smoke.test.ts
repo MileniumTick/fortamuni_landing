@@ -21,6 +21,6 @@ describe('homepage brand surfaces', () => {
     expect(homepage).toContain('"@type": "ProfessionalService"');
     expect(homepage).toContain('"name": "Fortamuni"');
     expect(homepage).toContain('const logoImage = \'https://fortamuni.com/fortamuni-logo.svg\';');
-    expect(homepage).toContain('"image": "https://fortamuni.com/og-image.jpg"');
+    expect(homepage).toContain('"image": "https://fortamuni.com/og-image.webp"');
   });
 });
