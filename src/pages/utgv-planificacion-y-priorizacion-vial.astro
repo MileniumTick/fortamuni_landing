@@ -2,11 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 
 const title = 'UTGV: planificación y priorización vial municipal | Fortamuni';
-const description = 'Fortalezca su UTGV con metodología de planificación y priorización vial, matrices técnicas defendibles y mejor ejecución de inversión cantonal.';
+const description = 'Fortalezca su UTGV con metodología de planificación vial, matrices de priorización técnicas y mejor ejecución de la inversión cantonal. Soporte ante concejo, comunidad y auditoría.';
 const canonical = 'https://fortamuni.com/utgv-planificacion-y-priorizacion-vial/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'UTGV: Planificación y Priorización Vial', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -31,56 +42,62 @@ const canonical = 'https://fortamuni.com/utgv-planificacion-y-priorizacion-vial/
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">El rol estratégico de la UTGV en la municipalidad</h2>
             <p>
-              La Unidad Técnica de Gestión Vial (UTGV) es mucho más que un departamento ejecutor; constituye el núcleo estratégico para el desarrollo económico y social del cantón. Al administrar la red vial cantonal, la UTGV gestiona el activo más valioso de la municipalidad, impactando directamente en la movilidad, la seguridad y la calidad de vida de los habitantes. Su labor es fundamental para materializar el mandato de la Ley 8114 y la Ley 9329.
+              La Unidad Técnica de Gestión Vial (UTGV) no es solo un departamento ejecutor. Es el núcleo técnico de la inversión vial cantonal: administra el activo más valioso de la municipalidad y su trabajo tiene impacto directo en la movilidad, la seguridad y la calidad de vida del cantón. Todo lo que hace —o deja de hacer— repercute en el <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">cumplimiento de la Ley 8114 y la Ley 9329</a>.
             </p>
             <p>
-              Para operar con eficacia, la UTGV debe armonizar múltiples variables complejas: la ingeniería de pavimentos, la gestión de presupuestos limitados, las normativas de contratación pública y las expectativas ciudadanas canalizadas a través de los concejos de distrito y el concejo municipal. Este equilibrio exige un equipo técnico altamente capacitado y procesos administrativos ágiles que permitan traducir la planificación en obras reales.
-            </p>
-            <p>
-              El liderazgo de la UTGV es clave para promover una visión a mediano y largo plazo. Al establecer lineamientos técnicos claros y defender la priorización basada en datos, la unidad técnica protege a la administración local de improvisaciones, asegurando que los recursos se inviertan de manera eficiente, sostenible y con estricto apego a las directrices del MOPT y la CGR.
+              Para operar bien, la UTGV tiene que manejar simultáneamente ingeniería de pavimentos, gestión de presupuestos limitados, normativa de contratación pública y expectativas ciudadanas canalizadas por los concejos de distrito. Eso exige procesos técnicos claros y herramientas que permitan convertir la planificación en obras reales —sin improvisaciones que luego generen problemas en auditoría.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Criterios para una priorización vial objetiva y defendible</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo se construye una priorización vial objetiva</h2>
             <p>
-              La asignación de recursos a proyectos viales sin el respaldo de una metodología estructurada expone a la municipalidad a serios riesgos legales y observaciones por parte de la Contraloría General de la República. La priorización no puede depender de presiones coyunturales; debe estar anclada en una matriz de evaluación multicriterio que brinde legitimidad técnica a cada decisión.
+              Asignar recursos a proyectos viales sin metodología estructurada es el origen de la mayoría de los hallazgos de la CGR sobre gestión vial municipal. La priorización no puede depender de qué comunidad presiona más fuerte. Tiene que estar anclada en una matriz de evaluación multicriterio que sea transparente y verificable.
             </p>
             <p>
-              Una priorización objetiva exige analizar y ponderar factores concretos de cada tramo de la red. Elementos como el volumen de Tránsito Promedio Diario (TPD), la conectividad con centros de salud y educación, el apoyo a corredores productivos y el estado actual del pavimento (índice de condición estructural), deben integrarse en un modelo matemático claro. Esto garantiza que las rutas de mayor impacto reciban atención oportuna.
+              Una matriz bien construida evalúa factores concretos: volumen de tránsito promedio diario (TPD), conectividad con centros de salud y educación, apoyo a corredores productivos y estado actual del pavimento según índice de condición estructural. Esos factores se ponderan y producen un ranking objetivo de intervenciones. Cuando ese ranking está disponible, el Concejo Municipal puede discutir prioridades con datos reales, no con intuiciones. Ver también: <a href="/guia/como-priorizar-inversion-en-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">guía de priorización de inversión vial</a>.
+            </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Variables para una matriz de priorización técnica</p>
+              <ul class="space-y-2 text-base text-muted-foreground mt-0 mb-0">
+                <li>• Volumen de Tránsito Promedio Diario (TPD)</li>
+                <li>• Conectividad con servicios esenciales: EBAIS, escuelas, colegios</li>
+                <li>• Importancia económica: rutas agrícolas, industriales, turísticas</li>
+                <li>• Estado de conservación del pavimento (índice de condición estructural)</li>
+                <li>• Riesgo ante eventos hidrometeorológicos</li>
+              </ul>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Herramientas técnicas para formular proyectos</h2>
+            <p>
+              El salto de la planificación a la obra exitosa depende de la calidad de la formulación del proyecto. Un proyecto mal concebido desde el inicio —con términos de referencia ambiguos o estudios insuficientes— genera adendas, modificaciones contractuales y observaciones de control que consumen recursos administrativos y levantan alertas en auditoría.
             </p>
             <p>
-              Al implementar estas matrices, la UTGV empodera al concejo municipal y a la junta vial cantonal con herramientas transparentes para la toma de decisiones. Un sistema de priorización defendible facilita la justificación de los proyectos ante las comunidades y blinda las actuaciones de los funcionarios frente a auditorías, demostrando que la inversión pública responde al bienestar general.
+              La formulación técnica requiere diseños geométricos y estructurales, estudios de suelos, levantamientos topográficos y memorias de cálculo. Las especificaciones deben estar alineadas con la normativa del MOPT (CR-2010 actualizada). Ese nivel de detalle en la fase precontractual es lo que hace que los procesos en SICOP sean más fluidos y que las obras se ejecuten dentro de los plazos y costos previstos.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Herramientas técnicas para la formulación de proyectos</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">El reto de la ejecución presupuestaria</h2>
             <p>
-              La transición de la planificación a la obra exitosa reside en la calidad de la formulación del proyecto. Una iniciativa vial mal concebida desde su inicio está condenada a sobrecostos, retrasos y potenciales conflictos legales. Por ello, la UTGV debe apoyarse en herramientas técnicas robustas que garanticen precisión y cumplimiento normativo.
+              Ejecutar el presupuesto vial en el entorno municipal costarricense es complejo por la rigurosidad de la Ley General de Contratación Pública. La UTGV tiene que convertir la planificación en carteles de licitación técnicamente sólidos, con requerimientos claros que no limiten la libre competencia en SICOP. Una adenda derivada de términos de referencia deficientes no solo atrasa la obra: levanta una bandera roja ante las auditorías internas y la CGR.
             </p>
             <p>
-              La formulación rigurosa implica el desarrollo de diseños geométricos y estructurales detallados, estudios de suelos, levantamientos topográficos y memorias de cálculo exhaustivas. Asimismo, es imperativo que las especificaciones técnicas y los análisis de precios unitarios estén perfectamente alineados con la normativa nacional vigente, como los manuales y especificaciones del MOPT (CR-2010 o sus actualizaciones).
-            </p>
-            <p>
-              Utilizar software especializado para el diseño y la gestión presupuestaria no solo optimiza el tiempo del equipo técnico, sino que minimiza el margen de error. Proyectos bien formulados se traducen en procesos de contratación fluidos y en obras que cumplen con los estándares de durabilidad esperados para la infraestructura municipal.
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">El reto de la ejecución presupuestaria y contratación pública</h2>
-            <p>
-              Ejecutar el presupuesto vial en el entorno municipal costarricense representa un desafío mayúsculo debido a la rigurosidad de la Ley General de Contratación Pública. La UTGV debe transformar la planificación en carteles de licitación blindados técnicamente, asegurando que los requerimientos sean claros, objetivos y no limiten la libre competencia en la plataforma SICOP.
-            </p>
-            <p>
-              Una de las problemáticas más comunes es la generación de adendas y modificaciones contractuales derivadas de deficiencias en la planificación o en la elaboración de los términos de referencia. Estas situaciones no solo consumen valiosos recursos administrativos, sino que levantan banderas rojas ante las auditorías internas y la CGR. La precisión técnica en la fase precontractual es indispensable para una ejecución sin sobresaltos.
-            </p>
-            <p>
-              Además, la supervisión de la ejecución requiere metodologías eficientes para la fiscalización en campo de los contratos, ya sean de mantenimiento rutinario, periódico o de obras mayores. El control de calidad y la verificación de hitos de cumplimiento aseguran que la inversión municipal se traduzca en una red vial cantonal resiliente y funcional.
+              La supervisión de la ejecución también tiene exigencias metodológicas: verificación de hitos de cumplimiento, control de calidad en campo y documentación de cada intervención. Ese registro es el que permite demostrar que los fondos de <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">Ley 8114</a> se usaron exactamente como estaba planificado.
             </p>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Soporte estratégico para UTGV</h2>
             <p>
-              Las UTGV a menudo enfrentan una carga operativa abrumadora que limita su capacidad para enfocarse en la planificación estratégica y la formulación técnica profunda. En Fortamuni, entendemos estos retos y nos posicionamos como un aliado experto para robustecer la gestión de su unidad técnica, aportando metodologías comprobadas y soluciones prácticas.
+              Las UTGV muchas veces están tan cargadas operativamente que no tienen tiempo para la planificación estratégica que sus funciones requieren. En Fortamuni trabajamos con la unidad técnica en la estructuración de matrices de priorización, la actualización del <a href="/inventario-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">inventario vial</a>, la elaboración del <a href="/planes-viales-quinquenales-municipales/" class="text-accent hover:text-accent/80 font-medium">PVQCD</a> y las especificaciones técnicas para carteles de contratación. El objetivo es desahogar esa presión operativa y darle a la UTGV el respaldo técnico para que las decisiones del concejo y la administración siempre estén bien fundamentadas.
             </p>
-            <p>
-              Proveemos acompañamiento especializado en la estructuración de matrices de priorización, la actualización de inventarios viales y la elaboración de especificaciones técnicas para carteles de contratación. Nuestro objetivo es desahogar la presión operativa de la UTGV, brindando el respaldo técnico necesario para que las decisiones del concejo municipal y la administración estén siempre sólidamente fundamentadas.
-            </p>
-            
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/guia/como-priorizar-inversion-en-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Guía: Cómo priorizar la inversión en la red vial cantonal</a></li>
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ PVQCD: el documento que respaldada la planificación de la UTGV</a></li>
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario Red Vial: base de datos que la UTGV necesita actualizada</a></li>
+                <li><a href="/cumplimiento-ley-8114-ley-9329/" class="text-primary hover:text-accent font-medium transition">→ Cumplimiento Ley 8114 y 9329: el marco normativo de la UTGV</a></li>
+              </ul>
+            </div>
+
             <div class="rounded-2xl bg-surface p-8 border border-border mt-12 mb-8 text-center">
               <h3 class="text-2xl font-bold text-primary mb-4">¿Busca fortalecer las capacidades técnicas de su UTGV?</h3>
               <p class="text-muted-foreground mb-6">

@@ -1,12 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-const title = 'Errores comunes en la valoración de activos viales (NICSP) | Guía Fortamuni';
-const description = 'Identifique y evite los errores más frecuentes al aplicar las Normas Internacionales de Contabilidad para el Sector Público en la red vial.';
+const title = 'Errores en valoración de activos viales bajo NICSP | Fortamuni';
+const description = 'Identifique los errores más frecuentes al aplicar NICSP en la red vial: inventarios desactualizados, depreciación mal calculada y omisión de obras complementarias. Guía técnica para municipalidades.';
 const canonical = 'https://fortamuni.com/guia/errores-en-valoracion-de-activos-viales-nicsp/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'Errores en Valoración NICSP', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,46 +36,82 @@ const canonical = 'https://fortamuni.com/guia/errores-en-valoracion-de-activos-v
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                La transición contable a las NICSP en Costa Rica ha revelado brechas significativas entre el estado físico de los caminos y lo que las municipalidades declaran en sus balances. Conozca qué evitar.
+                La transición contable a las NICSP en Costa Rica ha evidenciado brechas significativas entre el estado físico real de los caminos y lo que las municipalidades declaran en sus balances. Estos son los errores más costosos y cómo evitarlos.
               </p>
             </div>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Inconsistencias entre inventario físico y registro contable</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Error 1: Desconexión entre el inventario físico y el registro contable</h2>
             <p>
-              El primer y más crítico error en la adopción de las Normas Internacionales de Contabilidad para el Sector Público (NICSP) surge cuando existe una desconexión fundamental entre los registros contables y la realidad física de la red vial. Es frecuente que los libros contables reflejen superficies de rodamiento en asfalto que, tras años de abandono, han retrocedido a lastre deteriorado, o por el contrario, caminos registrados con valor cero que ya han sido intervenidos mediante recarpeteos o tratamientos superficiales financiados con recursos propios.
+              El primer y más crítico problema surge cuando los libros contables y la red vial real no coinciden. Es frecuente encontrar vías registradas como asfalto que llevan años deterioradas hasta lastre, o caminos con valor cero que ya recibieron tratamientos superficiales financiados con recursos propios. Ambos casos distorsionan los estados financieros.
             </p>
             <p>
-              Esta divergencia contamina la fiabilidad de los estados financieros municipales. Para que un modelo de valoración NICSP sea validado, debe descansar sobre un inventario vial exhaustivo y georreferenciado, actualizado mediante inspecciones técnicas de campo. Sin esta base empírica, la cuantificación del patrimonio institucional carece de respaldo probatorio, lo cual desemboca invariablemente en observaciones severas por parte de la auditoría interna y fiscalizaciones de la Contraloría General de la República (CGR).
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Fallos en la estimación de la vida útil de los pavimentos</h2>
-            <p>
-              Un error metodológico sumamente común en la contabilidad gubernamental es la aplicación de esquemas de depreciación en línea recta basados en parámetros genéricos, desconociendo el comportamiento real de los pavimentos. Las infraestructuras viales no se deprecian de manera uniforme; su vida útil remanente está directamente condicionada por el Volumen Medio Diario (TPDA), la carga de vehículos pesados, las condiciones climáticas del cantón y, de forma determinante, el historial de mantenimiento rutinario y periódico ejecutado por la municipalidad.
-            </p>
-            <p>
-              Ignorar estas variables provoca una sobrevaloración o subvaloración material de los activos en los estados financieros. Una implementación rigurosa de las NICSP exige que la UTGV provea modelos de deterioro técnico que ajusten la vida útil estimada con base en el índice de rugosidad (IRI), fallas visibles y capacidades estructurales. Un activo vial sin mantenimiento acelerará su depreciación real mucho antes de lo proyectado contablemente, y este desgaste acelerado debe reflejarse en los libros con la justificación ingenieril correspondiente.
+              Para que un modelo de valoración NICSP sea válido, tiene que partir de un <a href="/inventario-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">inventario vial exhaustivo y georreferenciado</a>, actualizado mediante inspecciones técnicas de campo. Sin esa base empírica, la cuantificación del patrimonio no tiene respaldo probatorio, y eso produce observaciones severas en auditoría interna y fiscalizaciones de la Contraloría.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Omisión de obras complementarias en el avalúo</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Error 2: Depreciación calculada con parámetros genéricos</h2>
             <p>
-              La simplificación del avalúo es un riesgo constante. Limitar el registro de la infraestructura únicamente a la valoración de la carpeta de rodamiento (asfalto, concreto o lastre) subestima masivamente el patrimonio municipal. El sistema vial es un activo compuesto donde cada elemento cumple una función integral. Elementos cruciales como el sistema de drenaje pluvial (cunetas, cunetas revestidas, vados), puentes, alcantarillas de cuadro, aceras, cordón y caño, y la señalización vertical y horizontal, representan una fracción significativa del costo de reposición.
+              Un error metodológico frecuente es aplicar depreciación en línea recta con valores genéricos, ignorando el comportamiento real del pavimento en el cantón. Las vías no se deterioran de forma uniforme: su vida útil real depende del tránsito pesado, el régimen de lluvias, el historial de mantenimiento y la calidad de la construcción original.
             </p>
             <p>
-              La omisión de estos componentes vulnera el principio de revelación íntegra de los estados financieros. Las metodologías de valoración exigidas por la normativa deben desglosar el activo en sus distintas partes componentes, cada una con su propia tasa de depreciación y valor de reposición. No incluir las obras complementarias en el proceso de adopción de las NICSP no solo disminuye los activos de la entidad en el balance general, sino que también distorsiona la planificación financiera futura para su mantenimiento y eventual sustitución.
+              Una vía sin mantenimiento rutinario se degrada mucho más rápido de lo que proyecta una tabla genérica. Si la depreciación en los libros no refleja ese deterioro acelerado, los activos quedan sobrevaluados. Eso es exactamente lo que la CGR señala como subvaloración técnica en sus informes de fiscalización a municipalidades. La solución es incorporar modelos de deterioro que ajusten la vida útil según el Índice de Rugosidad Internacional (IRI) y las condiciones reales del activo.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Recomendaciones para auditorías exitosas</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Error 3: Omitir las obras complementarias del avalúo</h2>
             <p>
-              La clave para superar exitosamente las fiscalizaciones contables radica en la comunicación interdisciplinaria. El departamento de Contabilidad y la Unidad Técnica de Gestión Vial (UTGV) deben abandonar la mentalidad de silos y establecer un flujo de información continuo. Contabilidad requiere los insumos ingenieriles de la UTGV para fundamentar sus registros, mientras que la UTGV necesita comprender las implicaciones financieras de cada proyecto de mejoramiento o mantenimiento para su debida capitalización o gasto en el periodo.
+              Limitar el registro al valor de la carpeta de rodamiento es uno de los errores que más subestima el patrimonio municipal. El sistema vial es un activo compuesto: los sistemas de drenaje (cunetas, alcantarillas, vados, puentes), la señalización, el cordón y caño y las aceras representan una fracción significativa del costo de reposición total.
             </p>
             <p>
-              Además, es indispensable institucionalizar el proceso de actualización continua. La valoración de activos viales no es un ejercicio de una sola vez, sino un ciclo permanente. Toda mejora capitalizable (como una pavimentación) y todo ajuste por deterioro sustancial (como la pérdida de una vía por un evento climático) debe documentarse con expedientes técnicos sólidos y trazables. Un sistema de gestión que integre evidencia fotográfica, expedientes de contratación y resoluciones técnicas garantizará la emisión de informes financieros sin salvedades y fortalecerá la confianza en la administración del gobierno local.
+              Omitir esos componentes viola el principio de revelación íntegra de los estados financieros. Las metodologías NICSP exigen desglosar el activo en sus partes, cada una con su propia tasa de depreciación y valor de reposición. Si las obras complementarias quedan fuera, el patrimonio declarado es menor al real, y eso genera hallazgos contables que son costosos de corregir después.
             </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Los tres errores más frecuentes en la valoración NICSP</p>
+              <div class="space-y-4 mt-2">
+                <div class="flex gap-3">
+                  <span class="text-accent font-bold text-lg shrink-0">01</span>
+                  <div>
+                    <p class="font-semibold text-primary mb-1">Inventario físico desactualizado</p>
+                    <p class="text-sm text-muted-foreground">Los libros contables no coinciden con la condición real de la red vial.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-accent font-bold text-lg shrink-0">02</span>
+                  <div>
+                    <p class="font-semibold text-primary mb-1">Depreciación con parámetros genéricos</p>
+                    <p class="text-sm text-muted-foreground">Se ignoran el tránsito pesado, el mantenimiento real y el deterioro observado.</p>
+                  </div>
+                </div>
+                <div class="flex gap-3">
+                  <span class="text-accent font-bold text-lg shrink-0">03</span>
+                  <div>
+                    <p class="font-semibold text-primary mb-1">Obras complementarias excluidas</p>
+                    <p class="text-sm text-muted-foreground">Drenajes, puentes, señalización y aceras quedan fuera del avalúo.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo preparar auditorías exitosas</h2>
+            <p>
+              El requisito fundamental es que Contabilidad y la UTGV trabajen juntas, no en silos. Contabilidad necesita los insumos de ingeniería de la UTGV para registrar correctamente. La UTGV necesita entender las implicaciones contables de cada mejora que capitaliza y cada deterioro que reconoce. Sin ese flujo de información conjunto, los registros quedan incompletos y generan nuevos hallazgos en lugar de resolver los anteriores.
+            </p>
+            <p>
+              El segundo requisito es institucionalizar el proceso de actualización. La <a href="/valoracion-activos-viales-nicsp/" class="text-accent hover:text-accent/80 font-medium">valoración de activos viales</a> no es un ejercicio de una sola vez: es un ciclo permanente. Cada mejora capitalizable y cada ajuste por deterioro debe documentarse con expediente técnico, evidencia fotográfica y resolución metodológica. Un sistema así garantiza estados financieros sin salvedad y construye confianza con los entes de control.
+            </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/valoracion-activos-viales-nicsp/" class="text-primary hover:text-accent font-medium transition">→ Servicio: valoración técnica de activos viales bajo NICSP</a></li>
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario Red Vial: la base del modelo de valoración</a></li>
+                <li><a href="/cumplimiento-ley-8114-ley-9329/" class="text-primary hover:text-accent font-medium transition">→ Cumplimiento Ley 8114 y 9329: cómo la valoración respalda el uso de fondos</a></li>
+              </ul>
+            </div>
   
             <div class="mt-12 rounded-2xl bg-primary p-8 text-primary-foreground">
               <h3 class="text-xl font-bold text-primary-foreground mb-4 mt-0">Respalde financieramente su gestión vial</h3>
               <p class="mb-6 text-primary-foreground/90">
-                Evite hallazgos de auditoría y garantice la correcta adopción de las NICSP en su municipalidad. Ofrecemos acompañamiento especializado para la correcta valoración, registro y actualización del patrimonio vial cantonal bajo un enfoque riguroso y multidisciplinario.
+                Evite hallazgos de auditoría y garantice la correcta adopción de las NICSP en su municipalidad. Acompañamiento especializado para la valoración, registro y actualización del patrimonio vial cantonal.
               </p>
               <div class="mt-8">
                 <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)] no-underline">

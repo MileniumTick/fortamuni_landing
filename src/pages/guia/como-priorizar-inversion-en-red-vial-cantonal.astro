@@ -1,12 +1,23 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 
-const title = 'Cómo priorizar la inversión en la red vial cantonal | Guía Fortamuni';
-const description = 'Metodologías y matrices técnicas para priorizar proyectos de inversión en infraestructura vial a nivel municipal.';
+const title = 'Cómo priorizar inversión en red vial cantonal | Guía Fortamuni';
+const description = 'Aprenda a construir matrices de priorización vial técnicamente defendibles: variables, ponderaciones y cómo justificar decisiones ante CGR, concejo y comunidad en Costa Rica.';
 const canonical = 'https://fortamuni.com/guia/como-priorizar-inversion-en-red-vial-cantonal/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'Guía de priorización de inversión vial', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,46 +36,86 @@ const canonical = 'https://fortamuni.com/guia/como-priorizar-inversion-en-red-vi
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                Los recursos municipales siempre serán limitados frente a las necesidades de la red vial. Priorizar correctamente no es asignar a dedo; es usar herramientas técnicas demostrables.
+                Los recursos municipales siempre serán insuficientes frente al tamaño de la red vial. Priorizar bien no es asignar a criterio propio: es usar herramientas técnicas que cualquier auditor puede verificar y cualquier vecino puede entender.
               </p>
             </div>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Variables críticas en la toma de decisiones</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Variables que determinan la urgencia de una intervención</h2>
             <p>
-              La asignación presupuestaria en la gestión de la red vial cantonal exige abandonar la discrecionalidad y adoptar parámetros medibles. Para lograrlo, es indispensable evaluar variables físicas, como el nivel de deterioro del pavimento, el estado del sistema de drenaje y la vulnerabilidad ante eventos hidrometeorológicos, factores que determinan la urgencia de la intervención desde la perspectiva de la ingeniería civil.
+              El primer paso de cualquier priorización es identificar las variables que van a determinar el ranking. Hay dos tipos: las variables físicas y las variables funcionales.
             </p>
             <p>
-              En paralelo, las variables funcionales y socioeconómicas aportan el contexto del impacto ciudadano. Criterios como el Volumen Medio Diario (TPDA), la conectividad con rutas nacionales, y el acceso a servicios esenciales (EBAIS, escuelas y colegios) o polos productivos (zonas agrícolas, industriales o turísticas), permiten a la Unidad Técnica de Gestión Vial (UTGV) justificar técnicamente por qué un camino debe intervenirse antes que otro, optimizando así los recursos provenientes de la Ley 8114.
+              Las variables físicas miden el deterioro del pavimento, el estado del sistema de drenaje y la vulnerabilidad ante eventos climáticos. Le dicen a la UTGV cuáles tramos necesitan intervención desde el punto de vista técnico de conservación. Las variables funcionales miden el impacto social y económico: el Volumen Medio Diario (TPDA), la conectividad con rutas nacionales, el acceso a servicios esenciales (EBAIS, escuelas) y la importancia para zonas productivas (agrícolas, industriales, turísticas).
+            </p>
+            <p>
+              Ninguna variable funciona sola. Una vía con alto deterioro pero bajo tránsito puede tener menos urgencia que una en estado regular pero con conectividad crítica para un polo productivo. El balance entre ambas dimensiones es lo que produce una priorización que resiste el análisis técnico y político.
+            </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Variables físicas vs. variables funcionales</p>
+              <div class="grid grid-cols-2 gap-4 text-sm mt-2">
+                <div>
+                  <p class="font-bold text-primary mb-2">Físicas (condición del activo)</p>
+                  <ul class="space-y-1 text-muted-foreground">
+                    <li>• Deterioro de la carpeta de rodamiento</li>
+                    <li>• Estado del sistema de drenaje</li>
+                    <li>• Vulnerabilidad ante lluvias e inundaciones</li>
+                    <li>• Obras complementarias en mal estado</li>
+                  </ul>
+                </div>
+                <div>
+                  <p class="font-bold text-primary mb-2">Funcionales (impacto social)</p>
+                  <ul class="space-y-1 text-muted-foreground">
+                    <li>• Volumen de tránsito diario (TPDA)</li>
+                    <li>• Conectividad con servicios esenciales</li>
+                    <li>• Importancia para actividad productiva</li>
+                    <li>• Acceso a zonas de desarrollo cantonal</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo se construye la matriz de priorización</h2>
+            <p>
+              La matriz es el instrumento que convierte esas variables en un ranking verificable. Cada variable recibe una ponderación porcentual, alineada con el Plan de Desarrollo Cantonal y los lineamientos del MOPT. Esa ponderación define cuánto pesa cada criterio en la nota final de cada tramo.
+            </p>
+            <p>
+              Lo clave es que las escalas de calificación sean claras: si una vía con más de 500 vehículos diarios recibe 10 puntos en el criterio de tránsito, eso debe estar definido antes de calificar cualquier tramo. Cualquier ambigüedad en las escalas es exactamente lo que permite interpretaciones sesgadas y lo que la CGR cuestiona cuando audita.
+            </p>
+            <p>
+              Cuando la matriz está lista y se aplica a todos los tramos de la red, el resultado es un ranking objetivo. Ese ranking es el insumo principal para el <a href="/planes-viales-quinquenales-municipales/" class="text-accent hover:text-accent/80 font-medium">Plan Vial Quinquenal (PVQCD)</a>: determina cuáles vías entran en el año uno, cuáles en el año dos y cuáles tienen que esperar.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Construcción de matrices de priorización</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo manejar la presión social sin perder criterio técnico</h2>
             <p>
-              La matriz de priorización es el principal escudo técnico de la UTGV y el Concejo Municipal. Al traducir las variables mencionadas en un sistema de puntaje objetivo, las municipalidades pueden establecer un ranking incuestionable de proyectos. Cada variable recibe una ponderación específica que debe estar alineada con el Plan de Desarrollo Cantonal y las directrices del MOPT, asegurando que la inversión responda a una visión estratégica de mediano y largo plazo.
+              Las Asociaciones de Desarrollo y otros grupos organizados van a presionar por obras concretas. Eso es parte del trabajo político de la gestión municipal, no un problema a evitar. La clave está en canalizar esas demandas a través de la matriz: la necesidad comunitaria entra como un criterio más, se pondera, y el resultado queda incorporado al análisis técnico.
             </p>
             <p>
-              Desarrollar estas matrices requiere un rigor metodológico estricto. Es fundamental definir escalas de calificación claras para cada criterio, evitando ambigüedades que puedan dar pie a interpretaciones sesgadas. Cuando este instrumento se somete a revisión de la Contraloría General de la República (CGR) o auditorías internas, la existencia de una matriz matemáticamente fundamentada demuestra transparencia, eficiencia en el uso de fondos públicos y estricto apego al marco normativo vigente.
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Balance entre presión social y viabilidad técnica</h2>
-            <p>
-              En el entorno municipal costarricense, es frecuente que las Asociaciones de Desarrollo Integral (ADI) y otros grupos organizados ejerzan presión para la ejecución de obras específicas en sus comunidades. Si bien la participación ciudadana es un pilar de la gestión local, estas demandas deben canalizarse institucionalmente. La matriz de priorización actúa como un filtro objetivo: la necesidad comunitaria se pondera como un criterio dentro de la ecuación, pero no anula los factores de viabilidad técnica y financiera.
-            </p>
-            <p>
-              Este equilibrio garantiza que las decisiones no se tomen bajo presiones coyunturales o compromisos políticos, previniendo riesgos legales para las autoridades municipales. Al transparentar los resultados de la matriz, la alcaldía y el Concejo Municipal pueden explicar con datos concretos a las comunidades por qué ciertas obras deben programarse en ejercicios presupuestarios posteriores, blindando la gestión institucional frente a reclamos infundados.
+              Cuando una comunidad solicita obra y no queda en el año uno del plan, la UTGV puede mostrarle los datos del ranking: cuántos puntos obtuvo esa vía, qué variables la penalizaron y qué vías la superaron técnicamente. Eso transforma una conversación de favoritismo político en una conversación de criterios verificables. Los reclamos infundados disminuyen porque hay números que los rebaten.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Casos de estudio en municipalidades de Costa Rica</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Casos de aplicación en municipalidades de Costa Rica</h2>
             <p>
-              El análisis retrospectivo de diversas administraciones locales evidencia el valor de una planificación estructurada. Gobiernos locales que han transitado de un modelo reactivo a uno preventivo han logrado extender sustancialmente la vida útil de su red vial. Esto se materializa al destinar recursos prioritariamente al mantenimiento periódico y rutinario de vías en estado regular, retrasando las costosas reconstrucciones que agotan rápidamente las partidas presupuestarias.
+              En nuestra experiencia, los cantones que han pasado de un modelo reactivo a uno preventivo han logrado extender la vida útil de su red vial con el mismo presupuesto. El mantenimiento periódico tiene un costo significativamente menor que la reconstrucción completa. Cuando la priorización direcciona recursos hacia vías en estado regular antes de que lleguen al deterioro severo, el rendimiento de cada colón invertido aumenta notablemente.
             </p>
             <p>
-              Asimismo, se ha documentado el éxito de modelos de ponderación mixta que equilibran el desarrollo urbano y rural. Al segmentar la matriz para atender equitativamente rutas de alto tránsito en distritos centrales y caminos de penetración agrícola en distritos periféricos, las municipalidades logran una distribución de los recursos de la Ley 8114 y Ley 9329 que fomenta la cohesión social y económica del cantón, asegurando resultados defendibles en cualquier auditoría externa.
+              Los modelos de ponderación mixta —que balancean rutas urbanas de alto tránsito con caminos de penetración agrícola en distritos periféricos— también han resultado eficaces para distribuir los recursos de <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">Ley 8114 y Ley 9329</a> de forma que sea técnicamente coherente y políticamente sostenible.
             </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/utgv-planificacion-y-priorizacion-vial/" class="text-primary hover:text-accent font-medium transition">→ UTGV: herramientas de planificación y priorización vial</a></li>
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ PVQCD: cómo la priorización alimenta el plan quinquenal</a></li>
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario Vial: la base de datos que alimenta la matriz</a></li>
+                <li><a href="/guia/que-es-un-pvqcd/" class="text-primary hover:text-accent font-medium transition">→ Guía: ¿Qué es un PVQCD y cuál es su estructura?</a></li>
+              </ul>
+            </div>
   
             <div class="mt-12 rounded-2xl bg-primary p-8 text-primary-foreground">
               <h3 class="text-xl font-bold text-primary-foreground mb-4 mt-0">Asegure la transparencia y eficiencia de su inversión vial</h3>
               <p class="mb-6 text-primary-foreground/90">
-                Implementar metodologías objetivas de priorización protege la gestión municipal de riesgos legales y optimiza el uso de los recursos públicos. Contamos con la experiencia para estructurar matrices alineadas a la normativa nacional y a las exigencias de los entes fiscalizadores.
+                Implementar una metodología objetiva de priorización protege a la gestión municipal de riesgos legales y optimiza el uso de los recursos públicos. Contamos con experiencia en construir matrices alineadas a la normativa nacional y a las exigencias de los entes fiscalizadores.
               </p>
               <div class="mt-8">
                 <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)] no-underline">

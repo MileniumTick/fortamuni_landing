@@ -2,11 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 
 const title = 'Valoración de Activos Viales bajo NICSP | Fortamuni';
-const description = 'Fortalezca estados financieros municipales con valoración de activos viales bajo NICSP, respaldo técnico-contable y menor riesgo de hallazgos en auditoría.';
+const description = 'Registre el patrimonio vial cantonal bajo NICSP con rigor técnico y contable. Mejore estados financieros municipales y reduzca observaciones en auditorías de la Contraloría General.';
 const canonical = 'https://fortamuni.com/valoracion-activos-viales-nicsp/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'Valoración de Activos Viales NICSP', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,53 +36,68 @@ const canonical = 'https://fortamuni.com/valoracion-activos-viales-nicsp/';
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                La valoración de activos viales bajo NICSP permite registrar con rigor el patrimonio vial del cantón. Esto mejora la calidad de los estados financieros y reduce observaciones en auditorías de la Contraloría.
+                La valoración de activos viales bajo NICSP permite registrar el patrimonio vial cantonal con rigor técnico-contable. Esto mejora la calidad de los estados financieros municipales y reduce observaciones en auditorías de la Contraloría.
               </p>
             </div>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">La importancia de las NICSP en la infraestructura pública</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Por qué las NICSP importan en la infraestructura vial</h2>
             <p>
-              Las vías cantonales, incluyendo caminos, puentes y sistemas de drenaje, representan con frecuencia el activo más valioso dentro del patrimonio de cualquier municipalidad. Históricamente, estos bienes de uso público no siempre se registraban con el rigor necesario en los estados financieros. La adopción de las Normas Internacionales de Contabilidad para el Sector Público (NICSP) viene a corregir este vacío, exigiendo que las instituciones estatales reconozcan su infraestructura contablemente de forma técnica y precisa. Implementar esta normativa asegura que las cuentas municipales reflejen la realidad económica del cantón, evidenciando tanto las inversiones realizadas como el valor actual de dichas obras.
+              Las vías cantonales —caminos, puentes, sistemas de drenaje— son con frecuencia el activo más valioso que tiene una municipalidad. Durante años, esos bienes no se registraban con el rigor que exige la normativa contable internacional. La adopción de las Normas Internacionales de Contabilidad para el Sector Público (NICSP), bajo mandato de la Contraloría General de la República, corrige ese vacío: obliga a las instituciones del Estado a reconocer su infraestructura de forma técnica y precisa.
             </p>
             <p>
-              El cumplimiento de las NICSP no es meramente un ejercicio contable de escritorio; constituye un mandato de la Contraloría General de la República orientado a la transparencia y la sana administración de los fondos públicos. Al registrar adecuadamente los activos viales, el gobierno local proporciona información fidedigna que facilita la toma de decisiones presupuestarias, dimensiona el esfuerzo fiscal que representa la infraestructura de conectividad y blinda a la administración ante procesos de fiscalización, mitigando observaciones y hallazgos patrimoniales por subvaluación de bienes.
+              Cuando los registros contables no reflejan la realidad física de la red vial, los estados financieros quedan distorsionados. La subvaloración patrimonial es uno de los hallazgos recurrentes en fiscalizaciones municipales. Un proceso de valoración bien ejecutado —con <a href="/inventario-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">inventario de campo actualizado</a> como base— permite eliminar ese hallazgo y blindar los estados financieros ante cualquier auditoría.
             </p>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Criterios técnicos para el avalúo de la red vial</h2>
             <p>
-              El proceso de avalúo de la red vial bajo el estándar NICSP requiere de una sinergia indispensable entre los parámetros de la ingeniería civil y los principios de la contabilidad pública. Para determinar el valor razonable o el costo de reposición depreciado de una vía, es imperativo analizar minuciosamente las características estructurales del pavimento. Esto incluye la evaluación de los tipos de material empleados (base, subbase, carpeta asfáltica, losas de concreto o superficies no pavimentadas), la medición de espesores de capa y la revisión de la memoria de diseño constructivo si existiera.
+              El avalúo bajo NICSP exige combinar ingeniería civil y contabilidad pública. Para determinar el valor de reposición depreciado de una vía, hay que analizar las características estructurales del pavimento: tipo de material (base, subbase, carpeta, lastre), espesores de capa y condición actual mediante inspección de campo. No es un ejercicio de escritorio.
             </p>
             <p>
-              Además de los componentes estructurales, el criterio técnico exige cuantificar el estado de conservación actual mediante inspecciones de campo. Los ingenieros deben determinar el grado de deterioro superficial y estructural, restando el desgaste acumulado a la vida útil teórica de la obra. Solamente a través de esta conjunción de cálculos de ingeniería de pavimentos, estimación de costos unitarios de construcción actualizados y modelos de depreciación técnica, la Unidad Técnica de Gestión Vial (UTGV) logra proveer al departamento contable cifras irrefutables y defendibles frente a cualquier auditoría financiera.
+              El estado de conservación determina el grado de deterioro acumulado, que se resta a la vida útil teórica de la obra. Solo combinando los cálculos de ingeniería de pavimentos, los costos unitarios de construcción actualizados y los modelos de depreciación técnica se obtienen cifras que la UTGV puede defender ante la auditoría interna y la CGR. Ver también: <a href="/guia/errores-en-valoracion-de-activos-viales-nicsp/" class="text-accent hover:text-accent/80 font-medium">errores frecuentes en la valoración NICSP</a>.
+            </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Qué cubre el proceso de valoración</p>
+              <ul class="space-y-2 text-base text-muted-foreground mt-0 mb-0">
+                <li>• Superficie de rodamiento (asfalto, concreto, lastre)</li>
+                <li>• Sistema de drenaje: cunetas, alcantarillas, puentes</li>
+                <li>• Obras complementarias: señalización, cordón y caño, aceras</li>
+                <li>• Modelos de depreciación ajustados al estado real de cada tramo</li>
+                <li>• Documentación para registro contable sin salvedad de auditoría</li>
+              </ul>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Qué le cambia a la municipalidad después de la valoración</h2>
+            <p>
+              Al capitalizar la totalidad de caminos y puentes bajo administración local, el patrimonio institucional refleja con honestidad la riqueza pública del cantón. Eso elimina la subvaloración patrimonial como hallazgo recurrente y le da al Concejo Municipal y a Hacienda herramientas reales para proyectar necesidades de mantenimiento, rehabilitación y reconstrucción.
+            </p>
+            <p>
+              Cuando se conoce con exactitud el valor de los activos y sus tasas de depreciación anual, las decisiones de presupuesto dejan de ser intuición. La municipalidad puede demostrar que la asignación de recursos responde al ciclo de vida del activo, no a presión política. Ese respaldo numérico es exactamente lo que la CGR busca cuando audita la inversión de fondos de <a href="/cumplimiento-ley-8114-ley-9329/" class="text-accent hover:text-accent/80 font-medium">Ley 8114 y Ley 9329</a>.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Impacto de la valoración en los estados financieros municipales</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Desafíos que encuentra la municipalidad al implementar NICSP</h2>
             <p>
-              La integración de una valoración certera de los activos viales transforma por completo el balance general del municipio. Al capitalizar la totalidad de los caminos y puentes bajo administración local, el patrimonio institucional experimenta un incremento sustancial que refleja con honestidad la riqueza pública del cantón. Esta regularización contable erradica el fenómeno de la subvaloración patrimonial, un señalamiento recurrente en la fiscalización de las entidades gubernamentales que no han logrado conciliar sus obras públicas con sus libros de finanzas.
+              El obstáculo más frecuente es la ausencia de registros históricos de costos de construcción. Muchas vías fueron construidas hace décadas sin documentación adecuada, o fueron recibidas por donación sin costeo formal. Eso obliga a aplicar metodologías de valoración retrospectiva, que requieren pericia técnica para que las cifras resultantes sean defendibles.
             </p>
             <p>
-              Más allá del cumplimiento normativo, este registro dotado de valor técnico ofrece herramientas robustas para la proyección financiera a mediano y largo plazo. Al conocer con exactitud el valor de los activos y sus tasas de depreciación anual, la municipalidad cuenta con el respaldo numérico necesario para fundamentar y defender sus requerimientos de presupuesto destinados al mantenimiento, rehabilitación y reconstrucción de la red vial. En consecuencia, las decisiones del Concejo Municipal se basan en la necesidad real de preservar el valor del patrimonio, sustituyendo la asignación de recursos por presión política por una fundamentada en el ciclo de vida del activo.
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Desafíos en la implementación contable de activos viales</h2>
-            <p>
-              El tránsito hacia el cumplimiento pleno de las NICSP en materia de infraestructura suele presentar grandes escollos para la gestión municipal. El principal desafío radica en la ausencia o dispersión de la información histórica sobre los costos de construcción originales. Muchas vías fueron construidas décadas atrás sin registros documentales adecuados o fueron recibidas de urbanizaciones y donaciones sin un costeo formal, lo que obliga a aplicar metodologías de valoración retrospectiva y peritajes técnicos que demandan alto rigor profesional.
-            </p>
-            <p>
-              Un segundo obstáculo crítico es la habitual desconexión que existe entre el área operativa (UTGV) y el departamento contable-financiero. El lenguaje de la ingeniería y el de las finanzas deben conciliarse para que los levantamientos físicos se traduzcan correctamente en asientos contables. Finalmente, estimar la depreciación real de vías que no han recibido un mantenimiento periódico adecuado añade complejidad al modelo matemático, pues el deterioro acelerado debe cuantificarse objetivamente para que la valoración no resulte irreal frente a la condición material del pavimento que transitan los contribuyentes.
+              El segundo problema es la desconexión entre la UTGV y el área contable. El lenguaje de la ingeniería y el de las finanzas deben traducirse mutuamente: los levantamientos físicos tienen que convertirse en asientos contables correctos. Sin ese puente metodológico, los registros quedan incompletos o con inconsistencias que generan nuevos hallazgos en lugar de resolverlos.
             </p>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Asesoría técnica en NICSP para gobiernos locales</h2>
             <p>
-              La transición y el ajuste hacia los marcos normativos contables internacionales son procesos que demandan alta especialización e interdisciplinariedad. En Fortamuni comprendemos que las municipalidades enfrentan un desafío enorme al intentar solventar esta obligación únicamente con su personal de planta, el cual suele estar enfocado en la operativa diaria de las obras. Por ello, fungimos como el puente metodológico esencial entre la ingeniería de infraestructura y la contabilidad gubernamental, facilitando un servicio integral de valoración técnica.
+              En Fortamuni funcionamos como el puente entre la ingeniería de infraestructura y la contabilidad gubernamental. Hacemos los inventarios físicos, los cálculos de ingeniería de costos, los modelos de depreciación y entregamos el paquete documental que necesita el departamento de contabilidad para registrar con seguridad jurídica y sin observaciones de auditoría.
             </p>
-            <p>
-              Nuestro equipo de expertos se encarga de realizar los inventarios físicos, efectuar los cálculos de ingeniería de costos, aplicar los modelos de depreciación correspondientes y entregar un paquete documental blindado. Dotamos a su administración de los informes periciales necesarios para que el departamento de contabilidad realice los registros con total seguridad jurídica, asegurando que su municipalidad cumpla plenamente con los lineamientos de las NICSP y los requerimientos de la Contraloría General de la República.
-            </p>
-            <p>
-              No arriesgue el patrimonio institucional de su cantón a auditorías negativas ni postergue el ordenamiento de sus finanzas públicas. Estamos listos para acompañarle en este proceso de regularización patrimonial de su red vial.
-            </p>
-  
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario de la Red Vial Cantonal: base física del avalúo NICSP</a></li>
+                <li><a href="/cumplimiento-ley-8114-ley-9329/" class="text-primary hover:text-accent font-medium transition">→ Cumplimiento Ley 8114 y 9329: cómo la valoración respalda el uso de fondos</a></li>
+                <li><a href="/guia/errores-en-valoracion-de-activos-viales-nicsp/" class="text-primary hover:text-accent font-medium transition">→ Guía: Errores más frecuentes en la valoración de activos viales</a></li>
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ PVQCD: cómo el patrimonio valorado alimenta la planificación quinquenal</a></li>
+              </ul>
+            </div>
+
             <div class="mt-10 mb-8 text-center">
               <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]">
                 Agendar diagnóstico técnico

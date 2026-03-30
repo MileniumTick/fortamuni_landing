@@ -2,11 +2,22 @@
 import Layout from "../layouts/Layout.astro";
 
 const title = 'Cumplimiento Ley 8114 y Ley 9329 en gestión vial | Fortamuni';
-const description = 'Asegure cumplimiento de Ley 8114 y Ley 9329 con trazabilidad técnica, planificación vial y soporte documental para evitar riesgos en ejecución presupuestaria.';
+const description = 'Asegure el cumplimiento de Ley 8114 y Ley 9329 con trazabilidad técnica, planificación vial documentada y soporte ante CGR para evitar paralizaciones presupuestarias.';
 const canonical = 'https://fortamuni.com/cumplimiento-ley-8114-ley-9329/';
+
+const breadcrumbs = [
+  { name: 'Inicio', url: 'https://fortamuni.com/' },
+  { name: 'Cumplimiento Ley 8114 y Ley 9329', url: canonical },
+];
+
+const article = {
+  datePublished: '2025-01-15',
+  dateModified: '2026-03-20',
+  description,
+};
 ---
 
-<Layout title={title} description={description} canonical={canonical}>
+<Layout title={title} description={description} canonical={canonical} breadcrumbs={breadcrumbs} article={article}>
   <div class="pt-32 pb-16">
   <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           
@@ -25,66 +36,69 @@ const canonical = 'https://fortamuni.com/cumplimiento-ley-8114-ley-9329/';
             
             <div class="rounded-2xl border border-accent/30 bg-accent/5 p-6 mb-10 text-primary">
               <p class="font-semibold text-lg mb-0 mt-0">
-                Cumplir la Ley 8114 y la Ley 9329 exige más que ejecutar presupuesto: requiere trazabilidad técnica, priorización vial y respaldo documental para sostener cada uso de fondos ante control y auditoría.
+                Cumplir la Ley 8114 y la Ley 9329 exige más que ejecutar presupuesto: requiere trazabilidad técnica, planificación vial documentada y respaldo para justificar cada uso de fondos ante la Contraloría General y el MOPT.
               </p>
             </div>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Marco legal: Ley 8114 y Ley 9329 explicadas</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Qué regulan la Ley 8114 y la Ley 9329</h2>
             <p>
-              La Ley 8114 (Ley de Simplificación y Eficiencia Tributarias) y la Ley 9329 (Ley Especial para la Transferencia de Competencias: Atención Plena y Exclusiva de la Red Vial Cantonal) conforman el marco jurídico fundamental que garantiza a las municipalidades de Costa Rica recursos específicos para el mantenimiento, rehabilitación y mejora de su infraestructura vial. Estos fondos, provenientes en gran medida del impuesto único a los combustibles, poseen una naturaleza de destino específico y no pueden ser desviados a otros rubros operativos del municipio.
+              La Ley 8114 (Ley de Simplificación y Eficiencia Tributarias) y la Ley 9329 (Ley Especial para la Transferencia de Competencias: Atención Plena y Exclusiva de la Red Vial Cantonal) son el marco jurídico que garantiza a las municipalidades recursos específicos para el mantenimiento, rehabilitación y mejora de su infraestructura vial. Esos fondos, provenientes del impuesto único a los combustibles, tienen destino específico: no se pueden redirigir a otros gastos operativos.
             </p>
             <p>
-              Comprender el alcance de ambas leyes es esencial para la sana administración municipal. Mientras que la Ley 8114 establece el origen de los fondos y los porcentajes de distribución, la Ley 9329 vino a consolidar la autonomía municipal, otorgando a los gobiernos locales la responsabilidad total y exclusiva sobre la red vial de sus cantones, obligando a una gestión eficiente y técnicamente justificada.
-            </p>
-            <p>
-              El cumplimiento estricto de este marco jurídico no es opcional. La correcta aplicación de estos recursos exige que los concejos municipales, alcaldías y áreas técnicas mantengan una trazabilidad impecable de los fondos, asegurando que cada inversión se realice de acuerdo con las normativas emitidas por el MOPT y las disposiciones de control establecidas por los entes fiscalizadores.
+              Mientras la Ley 8114 establece el origen y la distribución de los fondos, la Ley 9329 asignó a los gobiernos locales la responsabilidad total sobre su red vial cantonal. Eso significó más recursos, pero también mayor exigencia técnica y mayor exposición ante los entes de control.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Competencias de las Unidades Técnicas de Gestión Vial (UTGV)</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">El rol de la UTGV en el cumplimiento normativo</h2>
             <p>
-              Las Unidades Técnicas de Gestión Vial (UTGV) son el brazo operativo y técnico encargado de materializar los objetivos de la Ley 8114 y la Ley 9329. Su labor trasciende la simple ejecución de obras; son las responsables de planificar, priorizar y supervisar de forma integral todos los recursos destinados a la red vial cantonal, garantizando que las intervenciones obedezcan a criterios estrictamente técnicos.
+              Las <a href="/utgv-planificacion-y-priorizacion-vial/" class="text-accent hover:text-accent/80 font-medium">Unidades Técnicas de Gestión Vial (UTGV)</a> son el brazo operativo que materializa los objetivos de ambas leyes. Su función va más allá de ejecutar obras: planifican, priorizan y supervisan todos los recursos destinados a la red vial cantonal, garantizando que las intervenciones respondan a criterios técnicos documentados.
             </p>
             <p>
-              Dentro de sus principales competencias destaca la formulación y seguimiento del Plan Vial Quinquenal de Conservación y Desarrollo (PVQCD), documento rector que debe guiar cada colón invertido. La UTGV debe asegurar que las intervenciones, ya sean mantenimientos rutinarios, periódicos o de mejoramiento, respondan a las prioridades definidas en dicho plan, dejando de lado cualquier criterio antojadizo o presión política que carezca de sustento técnico.
+              El <a href="/planes-viales-quinquenales-municipales/" class="text-accent hover:text-accent/80 font-medium">Plan Vial Quinquenal (PVQCD)</a> es el documento rector que conecta las leyes con la ejecución. Cada colón de Ley 8114 que la UTGV gasta debe poder rastrearse al plan. Las intervenciones que no tienen ese respaldo —aunque sean técnicamente correctas— quedan expuestas a hallazgos de la CGR.
             </p>
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Qué audita la CGR sobre fondos de Ley 8114</p>
+              <ul class="space-y-2 text-base text-muted-foreground mt-0 mb-0">
+                <li>• Correspondencia entre el POA, el presupuesto y el PVQCD</li>
+                <li>• Procesos de contratación en SICOP: carteles, adjudicaciones, contratos</li>
+                <li>• Existencia y actualización del <a href="/inventario-red-vial-cantonal/" class="text-accent hover:text-accent/80 font-medium">inventario vial</a> ante el MOPT</li>
+                <li>• Aplicación de la normativa técnica en cada intervención</li>
+                <li>• Trazabilidad documental de cada partida ejecutada</li>
+              </ul>
+            </div>
+  
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Qué hace la CGR cuando encuentra falencias</h2>
             <p>
-              Además, la UTGV juega un rol crucial en la articulación con las Juntas Viales Cantonales y los Concejos de Distrito, proporcionando los insumos técnicos necesarios para que las autoridades políticas tomen decisiones informadas y ajustadas a derecho, asegurando la transparencia en el uso de los fondos públicos.
+              La Contraloría General no solo emite informes: puede paralizar partidas presupuestarias, iniciar investigaciones de responsabilidad administrativa o civil contra funcionarios y recomendar el congelamiento de transferencias futuras. Una falencia repetida en los inventarios viales, en la correspondencia entre el POA y el PVQCD, o en la gestión de contrataciones puede escalar rápidamente de una observación a una sanción operativa que afecta la ejecución del presupuesto del año siguiente.
             </p>
   
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Requisitos de la Contraloría General de la República (CGR)</h2>
+            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo evitar hallazgos y proteger el flujo de presupuesto</h2>
             <p>
-              La Contraloría General de la República (CGR) ejerce una vigilancia rigurosa sobre la ejecución de los recursos transferidos mediante las leyes 8114 y 9329. Para la CGR, no basta con ejecutar el presupuesto; las municipalidades deben demostrar fehacientemente que los fondos se utilizaron con eficiencia, eficacia y en estricto apego a la legalidad y a la planificación técnica previa.
+              El primer paso es garantizar que todas las decisiones de inversión tengan respaldo documental: el PVQCD vigente, el inventario actualizado y los estudios técnicos de cada proyecto deben estar disponibles y ordenados. Cualquier modificación de prioridades o ajuste presupuestario debe pasar por el escrutinio técnico de la UTGV y contar con aprobación formal del Concejo.
             </p>
             <p>
-              Entre los requisitos fundamentales auditados por la CGR se encuentra la correspondencia absoluta entre el Plan Operativo Anual (POA), el presupuesto asignado y el PVQCD. Cualquier desviación no justificada técnicamente puede ser motivo de hallazgos severos. Asimismo, se exige una gestión transparente en todos los procesos de contratación administrativa, con especial énfasis en el uso adecuado del Sistema Integrado de Compras Públicas (SICOP).
-            </p>
-            <p>
-              Las auditorías de la Contraloría también se enfocan en la existencia y actualización de los inventarios viales físicos y en la correcta aplicación de la normativa técnica del MOPT. Una falencia reiterada en estos controles puede derivar no solo en responsabilidades administrativas o civiles para los funcionarios involucrados, sino también en la paralización o retención de los giros presupuestarios correspondientes.
-            </p>
-  
-            <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Cómo evitar hallazgos y paralización de presupuestos</h2>
-            <p>
-              Para proteger a la municipalidad de hallazgos por parte de la CGR y garantizar el flujo continuo de recursos, es imprescindible adoptar un enfoque proactivo en la gestión vial. El primer paso es garantizar que todas las decisiones de inversión estén respaldadas por estudios técnicos sólidos y que exista una alineación inquebrantable entre los presupuestos anuales y el PVQCD.
-            </p>
-            <p>
-              Mantener actualizado el inventario de la red vial cantonal, tanto en sus componentes físicos como en su valoración financiera, es fundamental. Esta base de datos es el cimiento sobre el cual se deben calcular los costos de intervención y justificar las necesidades reales del cantón ante los entes fiscalizadores, evitando observaciones sobre la falta de planificación.
-            </p>
-            <p>
-              Finalmente, es vital documentar cada etapa del proceso de gestión. Toda modificación de prioridades o ajuste presupuestario debe pasar por el escrutinio técnico de la UTGV y contar con la aprobación formal del concejo municipal. La trazabilidad documental es el mejor escudo contra la paralización de presupuestos y garantiza una administración transparente y eficiente de la infraestructura pública.
+              La <a href="/valoracion-activos-viales-nicsp/" class="text-accent hover:text-accent/80 font-medium">valoración de activos bajo NICSP</a> también es parte del ecosistema de cumplimiento: los estados financieros que reflejan con precisión el patrimonio vial son menos vulnerables a hallazgos contables que los que muestran subvaloración sistemática.
             </p>
   
             <h2 class="text-2xl font-bold text-primary mt-12 mb-4">Consultoría para el cumplimiento normativo municipal</h2>
             <p>
-              En Fortamuni comprendemos la complejidad y la presión a la que se enfrentan las administraciones municipales para cumplir con los rigurosos estándares de la Ley 8114 y la Ley 9329. Nuestro enfoque consultivo está diseñado para fortalecer las capacidades de su UTGV y asegurar que cada proceso, desde la planificación hasta la ejecución, esté blindado a nivel técnico y legal.
+              En Fortamuni estructuramos la documentación técnica que la CGR y el MOPT requieren, optimizamos las metodologías de priorización y acompañamos a la UTGV en los procesos de planificación y ejecución para minimizar el riesgo de hallazgos. El objetivo no es cumplir por cumplir: es que la municipalidad tenga un proceso de gestión vial que resista cualquier auditoría sin preparación especial.
             </p>
-            <p>
-              Realizamos auditorías preventivas, optimizamos sus metodologías de priorización y le acompañamos en la estructuración de la documentación técnica requerida por el MOPT y la CGR. De esta manera, minimizamos el riesgo de hallazgos, garantizamos la ejecución continua de sus presupuestos y elevamos la calidad de la gestión vial de su cantón.
-            </p>
-            
+
+            <div class="rounded-2xl bg-muted border border-border p-6 my-8">
+              <p class="text-sm font-semibold uppercase tracking-wide text-accent mb-3">Contenido relacionado</p>
+              <ul class="space-y-2 text-base mt-0 mb-0">
+                <li><a href="/planes-viales-quinquenales-municipales/" class="text-primary hover:text-accent font-medium transition">→ Plan Vial Quinquenal (PVQCD): el instrumento que conecta la ley con la inversión</a></li>
+                <li><a href="/inventario-red-vial-cantonal/" class="text-primary hover:text-accent font-medium transition">→ Inventario de la Red Vial Cantonal: requisito para fondos de Ley 8114</a></li>
+                <li><a href="/utgv-planificacion-y-priorizacion-vial/" class="text-primary hover:text-accent font-medium transition">→ UTGV: planificación y priorización vial con respaldo ante control</a></li>
+                <li><a href="/valoracion-activos-viales-nicsp/" class="text-primary hover:text-accent font-medium transition">→ Valoración NICSP: soporte contable para los activos financiados con Ley 8114</a></li>
+              </ul>
+            </div>
+
             <div class="rounded-2xl bg-surface p-8 border border-border mt-12 mb-8 text-center">
               <h3 class="text-2xl font-bold text-primary mb-4">¿Necesita asegurar el cumplimiento en su municipio?</h3>
               <p class="text-muted-foreground mb-6">
-                Evite paralizaciones presupuestarias y asegure una gestión vial intachable.
+                Evite paralizaciones presupuestarias y asegure una gestión vial con trazabilidad sólida ante CGR y MOPT.
               </p>
               <a href="/#contacto" class="inline-flex items-center justify-center rounded-full bg-accent px-8 py-4 text-base font-bold text-accent-foreground transition hover:bg-[var(--color-accent-hover)]">
                 Agendar diagnóstico técnico
